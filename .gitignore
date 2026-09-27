@@ -1,0 +1,14 @@
+# Local production material and delivery binaries stay in the workspace.
+projects/*/assets/
+projects/*/renders/
+projects/*/final.mp4
+projects/*/review.jpg
+__pycache__/
+*.py[cod]
+*.wav
+*.mp3
+*.aac
+*.flac
+*.mov
+*.avi
+*.mkv

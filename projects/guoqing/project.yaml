@@ -1,0 +1,169 @@
+project: guoqing
+title: 先经过的，是清扫车
+status: complete
+deliverable: final.mp4
+format: 1920x1080, 24 fps, stereo
+target_duration_seconds: 90
+
+creative_plan:
+  audience_hook: >-
+    先听见机器刷子和观礼人群的声浪，再看到 11 辆清扫车先于正式队列经过。站在看台上的王立峰向前探身，一眼认出每天与自己一起工作的机器。第一个问题不是“庆典有什么”，而是“他认出了什么细节？”
+  central_question: >-
+    当一名日常清扫道路的司机变成观众，他会在盛大队列里看见什么别人略过的东西？
+  author_thesis: >-
+    同一台机器，平日是维修/清扫的工作对象，庆典中变成众人观看的队列一部分。王立峰从工作位置到看台位置的短暂变换，让日常维护与公众纪念进入同一条可见的道路；影片记录这个视角变化，不替他扩大成群体态度。
+  why_watch: >-
+    即使拿掉“国庆”，这也是一段少见的观看位置互换：观众最先认出的不是仪仗而是自己检查过的车辆。看台上一个身体前倾、车底下一只手摸过管路，构成可感的两个尺度。
+  narrative_engine: >-
+    同一辆车穿过两种相反视点：日常维修者在车底检查液压管线；国庆当天，他站上看台追随同类车辆先经过。两种观看推动镜头来回靠近，最后落回具体的维修动作。
+  cases_or_subjects:
+    - subject: 环卫机扫司机王立峰（新华社公开人物报道中的真实个案）。
+      place_and_time: 北京，2019 年 10 月 1 日国庆七十周年庆典；记者于同年 11 月 3 日跟访其工作。
+      physical_actions: 观礼台上踮脚/探身看车，辨认清扫车并讲解部件；日常检查时逐车钻到车下摸查液压管路。
+      surrounding_space: 道路上的观看人群、车辆通过的长轴线、车辆检修空间；避免复刻标志性政治影像或人物肖像。
+      sensory_details: 轮胎压过路面、刷盘低频旋转、液压管轻弹、观众换脚步、远处人声在车辆前后变化。
+      evidence_boundary: 新华社对一名受访者的报道；片中不声称他在庆典中驾驶该车，也不虚构其观礼后的心理。
+  structure:
+    - section: 第一辆先过（0–13 秒）
+      purpose: 先呈现报道中最特别的顺序，给观众一个要追的疑问。
+    - section: 车底下（13–31 秒）
+      purpose: 介绍人物的日常技能；镜头从部件而非领奖或面孔进入。
+    - section: 看台（31–52 秒）
+      purpose: 岗位反转；人群看队列，司机注视清扫车及具体部件。
+    - section: 机器进入队列（52–70 秒）
+      purpose: 一次移动把工作设备变为公共可见的队列成员；记者报道记录的感受用旁白归属给王立峰本人。
+    - section: 回到管路（70–84 秒）
+      purpose: 从声浪退回车底空间，呈现报道中后来一次跟访的工作动作。
+    - section: 结束在触摸（84–90 秒）
+      purpose: 不下“幕后英雄”总结，让精细的维修动作继续半秒后停片。
+  turning_points:
+    - 队列开始前经过的是清扫车，而非观众预期的方阵。
+    - 王立峰从平日操控/检查车辆的人变成了看台上的观看者。
+    - 记者在两个月后观察到他的日常仍是钻到车下检查管路。
+  climax_hypothesis: >-
+    他在车辆经过时身体前倾、像给身边观众讲解一样辨认机器；公共场面的声浪仍在，镜头只跟他的视线移动，不替他虚构激动表情。
+  ending_logic: >-
+    以报道随后一次日常检修的手部动作作答：观看位置换了，工作知识仍落在管路与接头上。旁白交代报道来源，车辆声音停在短暂的空气里。
+  visual_language: >-
+    观察性镜头、真实尺度的车道与检修空间、低饱和石色和工作橙；不做宣传海报构图，不直接使用大型旗帜/人物符号。用屏外事件声和前景车辆带出规模。
+  motion_strategy: >-
+    车道空景与透明写实车辆层合成，车辆横向进入、经过、离开画面；略微调整尺寸和高度以贴近路面位置，但不伪装成连续实拍。车队宽景只作数秒事实定位。维修动作先用广角交代空间，再以同景两张手部关键状态在接触拟音处作动作切接，不用长溶解伪装连续手势。真实人物不做肖像重现，所有情境影像均标为重构。
+  sound_world:
+    dialogue: 不伪造王立峰或任何真实现场口述声；仅用合成叙述者旁白转述报道，并给事实归属。
+    sync_foley: 车辆移动时的车轮路噪和刷毛脉冲、液压部件轻响、维修手套摩擦；车辆从左向右经过时，声像同步横移。
+    ambience: 维修间混响与通风、宽阔室外的风、人群的远近声场、车辆通过造成的声像移动。
+    event_sound: 原创非语言的人群远声与路边细响；不模拟广播、国歌、政治讲话或真实档案录音。
+    music: 节奏从车辆轮刷和液压敲击中长出，打击脉冲不过度英雄化；声音高点跟随车辆驶过而非人为政治音乐。
+  music_arc: >-
+    78 BPM 的低柔敲击与刷盘脉冲开启；维修空间段留出金属细响；看台段加入稀疏弦音和宽阔空间混响；车辆通过时将局部节奏拉长并展开和声；近高潮后抽走打击与混响，回到单次手套摩擦、金属管声和开头脉冲。
+  material_strategy:
+    generate: 观察尺度的车道、清扫机近景、车辆检修间及看台边缘环境；不生成王立峰肖像。
+    build_by_code: 用透明写实车辆层制作连续的进场、经过与离场；用受控视角和原生文字建立动作节拍与后期事实字幕。
+    real_sources: 仅引用新华社文字报道及官方国庆日决议；所有历史音画都是本项目重新制作的明确重构。
+  anti_cliches:
+    - 不铺陈多国庆典、不把镜头变成“国家象征巡礼”。
+    - 不把一名工人的感受外推成全体劳动者的观点。
+    - 不配虚构国歌、讲话、口号或伪档案噪声。
+    - 不用慢镜头、凝望镜头和空泛旁白替代检修、转头、探身等连续动作。
+    - 不安排来自来源之外的家庭对话或人物动机。
+  risks:
+    - AI 车辆细节可能错，尤其轮子、刷盘、液压部件；需把关键机械动作拆成画外/近景可控图层并核验。
+    - 场景规模容易被渲染成庆典宣传片；始终把注意力留在人物视点和工作动作。
+    - 使用公开人物名容易让人以为画面是现场影像；必须使用明确的重构署名且不仿制真实肖像。
+  why_watch_test:
+    label_removed: >-
+      它仍是一段关于岗位如何改变观看位置的个人故事，设备细节和动作具有独立吸引力。
+    likely_30_second_exit: 如果只见旗帜和城市大景，看不到司机具体辨认或检查机器的动作。
+    cliché_risk: “幕后劳动者也很伟大”的赞词；以技能、空间转换和动作呈现替代赞词。
+    climax_test: 高点是熟悉的工作对象从视野中穿过、当事人追随它，不是最大场面和最响音乐。
+    ending_test: 结尾回到报道中的检查行为，以触摸为动作停点，不复述“劳动值得尊重”。
+  replanning_rule: >-
+    完成约三分之一核心连续镜头与声场后停审：检查车体通过是否连贯、视角变化是否清楚、历史声音是否可能误听成档案。如图像过于宣传化或动作像慢推静帧，重做镜头设计。
+
+research:
+  fact_scope: 影片仅讲中国国庆节语境下的一次北京个案，不代表全国国庆体验。
+  verified_facts:
+    - source: 新华社 / 新华每日电讯，2019-12-27
+      fact: 王立峰有二十多年机扫工作经验；2019-10-01 在看台观看庆典；清扫车在正式队列前通过；其后报道跟访记录其检查液压管线。
+    - source: 中央人民政府委员会，1949-12-02
+      fact: 决议确定每年 10 月 1 日为中华人民共和国国庆日，自 1950 年起施行。
+  source_opinions: 新华社报道记录了王立峰看到环卫车队时感到工作被认可的个人感受。
+  author_analysis: 观众位置让机器和维护工作进入庆典可见范围；这是对场面安排与人物经验的解读，不代替当事人立场。
+  uncertainty: 新华社文本未说明王立峰当天的岗位调度或其庆典后立即返岗情况；影片不补写这些事。
+
+cases:
+  - id: wang-lifeng-2019
+    source: sources.md#登上国庆观礼台的环卫工
+    portrayal: faceless visual reconstruction of reported actions, no likeness or fake archive
+    voice: narrator only; claims attributed to published reporting
+
+structure:
+  narration_script: >-
+    二〇一九年十月一日，王立峰站上天安门观礼台。他做道路机扫，已经二十多年。正式队列开始前，十一辆环卫机扫车先经过。他踮起脚、伸着脖子望向东长安街。每辆车经过，他都行注目礼，还忍不住向身边观礼代表介绍车的功能。后来一次跟访，记者看见他钻到车底检查液压系统。对他来说，先经过的那支队伍，离工作最近。
+  shot_count_target: 9
+  visible_motion_coverage: >-
+    约一半时长有连续可见变化：三次车辆层从进场到离场共覆盖约 46 秒。手部特写有两个可读关键状态，以接触拟音处的短切连接，不计作连续手部运动。其余观察镜头保留静止空间；看台人群并未单独动画，车轮和刷盘也没有拆件旋转。
+
+motion:
+  real_people_policy: no generated likeness, no composited historical person, no reenacted private speech
+  continuous_actions:
+    - a reconstructed machine sprite travels from frame left through the open lane and out of frame in three long passes
+    - the mechanic's close-up shows two distinct gloved contact states, joined by a short match-action cut rather than a dissolve
+  camera: mostly held observation frames with small reframing on generated plates; continuous movement is concentrated in the vehicle passes
+
+sound:
+  stems: [voiceover, sync_foley, ambience, event_sound, music]
+  historic_recordings: none
+  event_audio: rebuilt sound texture, no anthem/slogan/speech
+
+music:
+  composition: original low-percussion and restrained string/sine score, mechanically paced
+  cue_points_seconds: {arrival: 0, workshop: 13, stand: 31, vehicle_pass: 52, workshop_return: 70, touch_stop: 84, stop: 90}
+  candidate_review: >-
+    另生成 68 BPM 替代稿，与成片 78 BPM 版按六段比较包络 RMS：78 BPM 为 -31.0/-24.0/-22.9/-22.5/-23.3/-25.4 dB，68 BPM 为 -32.2/-24.2/-23.4/-23.3/-24.1/-24.5 dB。选 78 BPM 使长车道通过段保留稳定工作脉冲，68 BPM 较缓，会把观察节奏推向更庄严的感觉。只比较音乐结构和电平，不声称完成主观听审。
+
+prompts:
+  workshop_image: "Observational wide interior of a municipal street-sweeper service bay in Beijing, late 2010s, one road-sweeping truck lifted just enough to inspect hydraulic hoses, practical fluorescent and dawn spill, workers seen only from behind or cropped at hands, documentary 35mm realism, natural muted color, no logos, no readable text."
+  parade_image: "Low-saturation observational reconstruction of a wide Beijing public avenue in October 2019, road-sweeping vehicles moving in a line before a formal procession, spectators from the back at the roadside, restrained daylight, believable urban scale and machine proportions, documentary lens, no identifiable person, no readable banners or political slogans, not an archive photograph."
+
+selected:
+  - asset: assets/avenue-empty.png
+    role: moving vehicle background plate
+    reason: >-
+      清空车道后，车辆层能沿可见路面连续经过，观礼人仍保留在前景；原始有车版本不再作为动作背景。
+  - asset: assets/sweeper-line.png
+    role: brief convoy establishing shot
+    reason: >-
+      一闪即过的全景交代报道中的车队先后顺序；长时间动作由另一张空路重构背景承担。
+  - asset: assets/sweeper-cutout.png
+    role: photorealistic moving street-sweeper layer
+    reason: >-
+      从同一组清扫车重构图衍生出的透明车辆层与背景摄影质感统一，可控地从画外通过，不再使用扁平图标车辆。
+  - asset: assets/workshop-closeup.png
+    role: hydraulic hose contact action
+    reason: 手套与液压软管实际接触，细节可信并与广角检修间保持光色一致。
+  - asset: assets/workshop-closeup-next.png
+    role: hand progression to hose fitting
+    reason: 同一特写中手部位置推进到接头，能在动作声上做短而连续的接触变化。
+rejected_reasons:
+  - asset: initial vector sweeper overlay
+    reason: 扁平小车与照片场景风格冲突，像信息图，也削弱了机械尺度。
+  - asset: avenue-observer.png as motion background
+    reason: 原画面车道中有静止车辆，与连续车辆层叠加时产生重影。
+  - asset: first wide workshop hand candidate
+    reason: 参考编辑没有改变手部位置，未形成可用的第二动作关键帧。
+material_review_replan: >-
+  首轮复看发现静止车辆背景会与动作叠影，扁平小车又与摄影质感冲突；因此清空道路、改用同组车辆的写实透明层，并将原车队宽景缩短为事实定位。再看完整通过段，曾出现车辆压到前景和车道边缘的穿帮，随后改成从画外进入、沿空路横向驶出。宽检修图之后补做同视角手部特写；第一张动作编辑未移动手部，已淘汰。再次事实核查删除“辨认部件声音”的旁白，改为报道中明确写到的行注目礼和介绍车辆功能。片尾说明合成旁白与 AI 情境重构，不冒充本人声音或现场档案。
+qa:
+  viewing_status: >-
+    完成 5 秒间隔审看片及车辆进场/中段/离场、手部接触、片尾关键帧复核；全片解码无错误。
+  source_attribution_and_scope: >-
+    旁白与片尾逐项对照新华社报道；未把当事人未说过的话改写成直接引语，也未推断未记载的动机。单一人物个案不代表所有环卫工或所有观礼者。
+  motion_and_physics: >-
+    三段车辆从左进入并离开画面，车身落在清空道路的路面透视范围内；手部动作采用两个状态与拟音同步的动作切接，避免长溶解的双手重影。行人背景保持静态，车轮和刷盘没有单独旋转；车辆通过段是受控合成，不是实拍物理运动。
+  reconstruction_disclosure: >-
+    片尾明确注明 AI 情境重构、非现场档案及合成旁白；没有真实人物肖像、历史录音、口号或仪式音频。
+  sound_space_and_mix: >-
+    配乐、同步拟音、环境、人群质感和六段合成旁白分别制作；最终 AAC 解码峰值 -2.1 dBFS，无削波采样、解码无错误。当前运行环境不支持主观听审，已核对时码、声像与峰值。
+  opening_middle_climax_ending: >-
+    开头先呈现清扫车，中段由车道转入检修手部，结尾回到液压部件并留来源卡；作者观察保持个案尺度，没有总结式政治判断。
