@@ -1,5 +1,12 @@
 # Local production material and delivery binaries stay in the workspace.
 projects/*/assets/
+!projects/gpt_music_film/assets/
+projects/gpt_music_film/assets/*
+!projects/gpt_music_film/assets/asset_manifest.json
+!projects/gpt_music_film/assets/song_lyrics.txt
+!projects/zhongqiu/assets/
+projects/zhongqiu/assets/*
+!projects/zhongqiu/assets/asset_manifest.json
 projects/*/renders/
 projects/*/final.mp4
 projects/*/review.jpg

@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "project": "gpt_music_film",
+  "acquisition": "Public high quality Freesound preview streams; no account or paid service used. Original sources declare CC0.",
+  "assets": [
+    {
+      "id": "office_keyboard_cc0",
+      "project": "gpt_music_film",
+      "scene": "Pre-Chorus 2 / desk and chorus workflow",
+      "purpose": "Real recorded keyboard taps for visible typing and cursor-contact beats.",
+      "duration": 3.803,
+      "capability_required": [
+        "office_foley",
+        "sync_sound"
+      ],
+      "source_or_case": "Keyboard typing, Breviceps, Freesound sound 447909.",
+      "visual_subject": "Keyboard and changing document fields.",
+      "primary_action": "Short typing bursts coincide with actual typing and accumulating requests.",
+      "camera": "Stereo recording; pan within the meeting-table-to-workflow move.",
+      "sound": "Use the public HQ preview, trim around the strongest clean key burst, and keep it below the lead vocal.",
+      "music_relation": "Place contact taps in gaps and on selected measured beats; do not mask consonants.",
+      "local_primary": "Edit and spatially place the licensed CC0 Freesound preview locally with FFmpeg.",
+      "local_fallback": "Use the captured public LQ preview from the same CC0 source; keep the sound identity and timing.",
+      "cloud_free_fallback": "Not needed; the source file is already local.",
+      "paid_fallback": "Record only; no paid service may be called without explicit approval.",
+      "hardware_requirement": "FFmpeg 8.1.2; none beyond the current workstation.",
+      "license_note": "CC0 1.0 declared on the source page; public HQ preview retained with source URL and checksum.",
+      "reference_inputs": [
+        "https://freesound.org/people/Breviceps/sounds/447909/"
+      ],
+      "prompt": "Recorded computer-keyboard typing; no generation prompt.",
+      "first_frame_requirement": "Not applicable to an audio asset.",
+      "last_frame_requirement": "Not applicable to an audio asset.",
+      "continuity_requirement": "Use the same recording throughout the POC; do not replace with synthetic ticks.",
+      "acceptance_criteria": [
+        "Source is genuine recorded typing",
+        "CC0 source is documented",
+        "keystrokes support visible action without obscuring lyrics"
+      ],
+      "status": "acquired_pending_mix_review",
+      "provider_used": "Freesound public CC0 HQ preview CDN",
+      "output_path": "assets/office_keyboard.mp3",
+      "primary_method": "Public CC0 Freesound preview stream; local trimming and mix.",
+      "fallback_method": "Public LQ preview of the same source; no generic synthetic click substitute.",
+      "local_file_sha256": "9777520f7b6a68f2b33104ee908437a78c434fb643a3038fab3fbdf235a848c5"
+    },
+    {
+      "id": "paper_shuffling_cc0",
+      "project": "gpt_music_film",
+      "scene": "Source-check redline and moving paper route",
+      "purpose": "Recorded paper handling to give the document world physical texture and stereo movement.",
+      "duration": 27.712,
+      "capability_required": [
+        "paper_foley",
+        "sync_sound"
+      ],
+      "source_or_case": "PaperShuffling.wav, GJOS, Freesound sound 128847.",
+      "visual_subject": "Printed citations, proof pages and an expanding request packet.",
+      "primary_action": "A proof sheet turns, then pages accelerate as deliverables collect.",
+      "camera": "Stereo paper source; pan from the left redline table toward the right workflow route.",
+      "sound": "Use distinct page turns, not a repeating full-volume loop; add short room reflections only where the cut opens space.",
+      "music_relation": "Page movement marks transitions between the source-check set piece and the manager's chorus.",
+      "local_primary": "Select and spatially place actual paper foley from the CC0 preview locally.",
+      "local_fallback": "Reuse a different passage from this same recorded paper source.",
+      "cloud_free_fallback": "Not needed; the source file is already local.",
+      "paid_fallback": "Record only; no paid service may be called without explicit approval.",
+      "hardware_requirement": "FFmpeg 8.1.2; none beyond the current workstation.",
+      "license_note": "CC0 1.0 declared on the source page; public HQ preview retained with source URL and checksum.",
+      "reference_inputs": [
+        "https://freesound.org/people/GJOS/sounds/128847/"
+      ],
+      "prompt": "Recorded paper being shuffled ever more frantically; no generation prompt.",
+      "first_frame_requirement": "Not applicable to an audio asset.",
+      "last_frame_requirement": "Not applicable to an audio asset.",
+      "continuity_requirement": "Maintain the recorded texture and use only as event-synced passages.",
+      "acceptance_criteria": [
+        "Paper contact is audible",
+        "CC0 source is documented",
+        "transitions follow visible paper motion"
+      ],
+      "status": "acquired_pending_mix_review",
+      "provider_used": "Freesound public CC0 HQ preview CDN",
+      "output_path": "assets/paper_shuffle.mp3",
+      "primary_method": "Public CC0 Freesound preview stream; local trimming and mix.",
+      "fallback_method": "Use a different take from the same recorded source; no synthetic noise substitute.",
+      "local_file_sha256": "2edaa57130e08802a4bb3fff3d19f7ddca27a85bc808e57c5ec71cef1d50b0c1"
+    },
+    {
+      "id": "pen_writing_cc0",
+      "project": "gpt_music_film",
+      "scene": "Source review, redline and checkbox contact",
+      "purpose": "Recorded writing and marking on paper, tied to visible corrections and review marks.",
+      "duration": 17.266,
+      "capability_required": [
+        "writing_foley",
+        "sync_sound"
+      ],
+      "source_or_case": "Writing On Paper.wav, rivernile7, Freesound sound 234016.",
+      "visual_subject": "A red pencil checks a citation and a real human review mark appears.",
+      "primary_action": "The pen writes a correction and a checkmark on paper.",
+      "camera": "Close, centered stereo image; preserve the near-field detail.",
+      "sound": "Use the recorded pen-on-paper strokes at the visible mark; do not replace with a digital blip.",
+      "music_relation": "Land the pen stroke on the measured visual correction, leaving the singer clear.",
+      "local_primary": "Trim and spatially place actual pen-on-paper recording from the CC0 preview.",
+      "local_fallback": "Use another passage from this same recording; keep it as paper-contact Foley.",
+      "cloud_free_fallback": "Not needed; the source file is already local.",
+      "paid_fallback": "Record only; no paid service may be called without explicit approval.",
+      "hardware_requirement": "FFmpeg 8.1.2; none beyond the current workstation.",
+      "license_note": "CC0 1.0 declared on the source page; public HQ preview retained with source URL and checksum.",
+      "reference_inputs": [
+        "https://freesound.org/people/rivernile7/sounds/234016/"
+      ],
+      "prompt": "Recorded pen writing on paper; no generation prompt.",
+      "first_frame_requirement": "Not applicable to an audio asset.",
+      "last_frame_requirement": "Not applicable to an audio asset.",
+      "continuity_requirement": "Use the same recorded tool and paper texture throughout the POC.",
+      "acceptance_criteria": [
+        "Writing and mark contact is audible",
+        "CC0 source is documented",
+        "stroke aligns with the visible correction"
+      ],
+      "status": "acquired_pending_mix_review",
+      "provider_used": "Freesound public CC0 HQ preview CDN",
+      "output_path": "assets/pen_writing.mp3",
+      "primary_method": "Public CC0 Freesound preview stream; local trimming and mix.",
+      "fallback_method": "Use another recorded stroke from the same source; no sine/noise click substitute.",
+      "local_file_sha256": "f2baff5a54992ed15505ae7060bef9e78eee963b2b4a9a075feb70e73cacdf7c"
+    },
+    {
+      "id": "busy_office_ambience_cc0",
+      "project": "gpt_music_film",
+      "scene": "Three connected office spaces throughout the POC",
+      "purpose": "Quiet stereo office bed with documented phone, keyboard and printing activity to establish room space.",
+      "duration": 24.149,
+      "capability_required": [
+        "office_ambience",
+        "stereo_space"
+      ],
+      "source_or_case": "Busy Office No People Loop, Fupicat, Freesound sound 534123; author identifies eight contributing sounds as CC0.",
+      "visual_subject": "A quiet but busy paper office, meeting room and workflow route.",
+      "primary_action": "Hold a low office bed beneath music, with small activity details audible at scene transitions.",
+      "camera": "Stereo room bed, deliberately wider and farther away than centered voice and near paper detail.",
+      "sound": "Quiet room bed only; reduce around lead vocal and limit telephone detail if it competes with lyrics.",
+      "music_relation": "Make music carry form; ambience gives space and must not compete with the lyric hook.",
+      "local_primary": "Mix the recorded CC0 office ambience locally, at a restrained level under the full song passage.",
+      "local_fallback": "Reduce ambience to near-silence in any vocal-conflict section; do not replace with generated hiss.",
+      "cloud_free_fallback": "Not needed; the source file is already local.",
+      "paid_fallback": "Record only; no paid service may be called without explicit approval.",
+      "hardware_requirement": "FFmpeg 8.1.2; none beyond the current workstation.",
+      "license_note": "CC0 1.0 declared on Fupicat's source page; preview retains the work under that declared license.",
+      "reference_inputs": [
+        "https://freesound.org/people/Fupicat/sounds/534123/"
+      ],
+      "prompt": "Recorded office ambience loop with typing and printing; no generation prompt.",
+      "first_frame_requirement": "Not applicable to an audio asset.",
+      "last_frame_requirement": "Not applicable to an audio asset.",
+      "continuity_requirement": "Use as a subtle continuous stereo room bed across three visually distinct spaces.",
+      "acceptance_criteria": [
+        "Stereo room space is present",
+        "music and lyrics remain clear",
+        "CC0 source and contributor note are documented"
+      ],
+      "status": "acquired_pending_mix_review",
+      "provider_used": "Freesound public CC0 HQ preview CDN",
+      "output_path": "assets/busy_office.mp3",
+      "primary_method": "Public CC0 Freesound preview stream; local level automation and mix.",
+      "fallback_method": "Lower or mute the same ambience during dense lines; no synthetic room-noise substitute.",
+      "local_file_sha256": "4cae1bf9eaeacb775b101d0cb202d86ead3c1eca950e2802bb66c4c2692db9a1"
+    }
+  ]
+}

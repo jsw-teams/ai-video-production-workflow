@@ -1,175 +1,235 @@
 project: zhongqiu
-title: 一个月的月饼
-status: complete
+title: 同一个节日，许多种动作
+status: paused_by_user
 deliverable: final.mp4
 format: 1920x1080, 24 fps, stereo
-target_duration_seconds: 92
+target_duration_seconds: 270
+status_reason: >-
+  用户于 2026-09-29 要求暂停制作并直接推送 GitHub main 复盘。既有研究、creative plan 和中秋困难 POC 输入保留；尚未提交任何中秋生成任务或 POC 成片。恢复后先完成 GPT 歌曲及其 POC，再制作火龙真实连续动作与家庭分饼细节的中秋 POC。项目未完成。
 
 creative_plan:
   audience_hook: >-
-    从节后的一口早餐开始：月饼为什么在普通工作日再次出现？旁白先埋下“一场中秋聚餐，之后一个月的早晚餐还是月饼”这个不太像节日祝词的尾声，再倒回那一晚。
-  central_question: >-
-    一顿节日聚会散场后，人们把什么带回了平常日子？
-  author_thesis: >-
-    这则家庭记忆最有力的部分不是一桌圆满的食物，而是食物留到下个月。节日劳动有余音：同一批月饼先是邻里共享，随后又占据日常餐桌。画面既保留那晚的热闹，也认真看见“做得太多”带来的后续。
+    先听见六枚骰子撞进瓷碗，再切到香港火龙穿过街巷、台湾烤炉的油响、苏州肉月饼裂开、灯笼穿过新加坡夜市、海外下班者切开一小块月饼。声音和动作彼此反差，提出“为什么这些看起来不同的事，都挤在同一个节日里？”
   why_watch: >-
-    无关中秋的观众也能看一则有明确反转的生活小故事：邻里把一顿饭做成了整整一个月的食物。搅拌、压模、送烤、围桌与早晨再切开同一块饼，连续动作本身带来节奏和细节。
-  narrative_engine: >-
-    工作量不断累积的烘焙过程，推动影片从夜前厨房到聚餐，再跨过节日边界进入一个月后的重复早餐。模具敲桌的三拍声贯穿这段时间。
-  cases_or_subjects:
-    - subject: 80 年代末哈尔滨一位小学女生的家庭中秋回忆，见《生活报》2006 年口述报道。
-      people: 母亲、在食堂工作的舅妈、包馅的舅舅、邻居与孩子；按来源中该家庭回忆作匿名视觉重构，不补造人物履历。
-      place_and_time: 哈尔滨，一户职工邻里在中秋前夕合做月饼并于中午聚餐；确切年份未知。
-      physical_actions: 和面、分馅、借模、包馅、压模、磕出饼坯、装箱送食堂烤制、端菜、分食、收起剩余月饼、次月早餐再次切开。
-      sensory_details: 一米大白瓷盆、油黑的借来模具、桌面三拍、烤箱热气、饼屑掉进纸盒、早餐瓷碗的勺声。
-      evidence_boundary: 具体劳动分配与剩余月饼来自受访者个人叙述；片中台词和声线是原创重构。
-  structure:
-    - section: 早餐的尾声（0–10 秒）
-      purpose: 先给反常的结果，不先讲节日知识；月饼进入平常餐桌。
-    - section: 邻里开工（10–27 秒）
-      purpose: 建立具体的家与时间；食材、盆、手和桌面动作逐一启动。
-    - section: 压模接力（27–51 秒）
-      purpose: 让声音和手势而非习俗字幕说明劳动如何被分担；完成动作 beats 与对白口型。
-    - section: 聚餐（51–69 秒）
-      purpose: 前段劳动终于成为多人共享的一餐；欢闹里看得见谁仍在端菜。
-    - section: 做得太多（69–82 秒）
-      purpose: 第一层转折；堆起的盒子使节日晚餐的时间继续伸长。
-    - section: 一个月后（82–92 秒）
-      purpose: 用第二次早餐作结；一块切开的月饼回应开场，模具三拍在留白中停下。
-  turning_points:
-    - opening_result: 节日的月饼先在节后早餐出现。
-    - labor_reveal: 镜头看清完成一块饼需要多少双手与往返。
-    - surplus: 聚会结束，剩余的月饼没有随节日结束。
-    - change_of_scale: 一个月从一桌菜变成重复的早餐和晚餐。
-  climax_hypothesis: >-
-    烤箱送回一盘盘饼，镜头仍跟着送饼的手，却切到饭后桌底下装满的盒子；热闹没有立刻结束，反而在“太多了”这里变味。
+    陌生观众能先得到一组具体、不同材质的动作，再逐渐理解节日怎样从天文日期进入地方街巷、家庭厨房、市场和移民生活；不是用节日符号清单解释百科。
+  central_question: 同一个日期怎样留在历法里，却被不同地方和每一代人过成不同的动作？
+  author_thesis: >-
+    中秋持续不是因为每个家庭始终照着同一套古老脚本生活，而是人们不断把天文时间、秋季物候、家庭关系、食物、地方社群和现代城市生活重新接在一起。
+  explanatory_layers:
+    - 中秋按农历八月十五，靠近秋季满月；公历日期每年改变。历法日期不等于每年精确天文满月。
+    - 讲清一项节日习俗如何通过真实身体、空间与声音完成，不用“传统上大家都会”代替观察。
+    - 横向并置地方、家庭、迁移和世代差异；个案只说明个案。
+  narrative_engine: 一枚从瓷碗弹出的骰子反复回到影片，声音从家庭桌面扩展到节庆街道、市场与新的家庭习惯。
   ending_logic: >-
-    次月早餐里最后一块饼被孩子分成两半；不下总结字幕，声音停在熟悉的三拍上。影片结束在日常仍带着那一晚的具体证据之处。
+    次日仍有人把剩下的月饼带进普通早餐；它不是遗留的节日摆设，而是这家人如何安排自己的中秋。收在“传统每一代都要重新练习”这一可见动作，不用共享月亮式祝词。
   visual_language: >-
-    16:9 纤维纸本水彩厨房、深褐色手绘线条与有限色彩人物。角色用稳定的头身比例和简洁的五类口型绘制，避免生成式脸部跳动。素材复核发现首张环境底图偏写实、人物像贴纸；重制水彩环境后，纸纹、线条和暖色范围更接近。时间主要通过动作和剪辑表达，不用月亮剪影填空。
-  motion_strategy: >-
-    场景环境由生成图建立空间氛围；人物以项目内绘制的矢量线稿逐帧/关键帧动画表演，保证时间连续。对白先用本地中文 TTS 制成声音文件，核对每句时长后标定闭口、开口、圆口、齿音口型；说话者侧身/背向拍摄，重要句切听者、食物或手部。压模动作逐项设准备、抬手、接触、出饼、反应、余韵，敲模 Foley 与接触帧同步。
-  sound_world:
-    dialogue: 两句短对白，由合成演员声演绎并标记为创作台词；另有一条中性叙述旁白，转述口述记录。
-    sync_foley: 和面黏手、瓷盆推桌、模具抬起/磕下、纸盒摩擦、盘碟碰桌、刀切月饼、勺触碗；均按动作表单独对齐。
-    ambience: 厨房房间音、楼道远声、食堂烤箱风扇、夜晚邻里底噪、节后清晨室内底噪。
-    event_sound: 三拍模具声是叙事动机；烤箱门和回来的纸箱标记接力与后果。
-    music: 木质敲击与轻拨弦/钢琴合成音乐；活动中段加层，超量处抽空，早餐只留开场音型的变奏。
+    纸本水彩和手绘线条贯穿历史、厨房和街巷，但人物必须完成可读的准备、抬手、接触、结果、反应和余韵。镜头通过完整动作与表演建立连续性，不把人物作为静态贴纸；地方色彩来自真实材料，不靠月亮、兔子或灯笼填空。
   music_arc: >-
-    74 BPM 轻木敲建立“手在做事”的脉冲；和面起持续低音，压模段加入两层拨弦形成接力；多人聚餐处织体最密但不踩每个切点；画面进入满盒余饼时音乐突然抽掉低频和节拍；早餐只留下开头三音与房间声，结尾留一拍空气。
-  material_strategy:
-    generate: 厨房/邻里空间的水彩背景与纸本质感候选；手绘角色姿势、表情和局部食物补充素材。
-    build_by_code: 可控线条人物动作、口型时轴、字幕、几何道具，以及音画同步的剪辑结构。
-    real_sources: 仅保留来源文字记录及链接用于事实核对；不把真实人物照片、采访声音或历史厨房照片冒充为本片素材。
-  anti_cliches:
-    - 不以满月、嫦娥、兔子灯和祝福词充当故事。
-    - 不把一户受访者的经历概括成所有中国家庭的共同习俗。
-    - 不将女性/男性的劳动分工写成受访者未表达的态度；以行动呈现。
-    - 不以高速口型或正面讲述展示技术；表演重心是手、等待和听者反应。
-  risks:
-    - 有限动画若只让画面轻推，人物会退化成绘本；需确实呈现拿、递、压、端、坐、切的动作。
-    - 过度甜美会隐藏“做太多”这个真实转折；中段需保留疲劳和满盒余量。
-    - 合成中文对白可能不自然；控制台词长度，音乐给语句留出空隙。
-  why_watch_test:
-    label_removed: >-
-      仍是一则“一个晚上生产出一个月余量”的家庭时间故事，劳动、分享与剩余三种关系本身可看。
-    likely_30_second_exit: 如果开头先泛谈节日，或厨房动作是静止插画，陌生观众会离开。
-    cliché_risk: 大月亮、笑脸全家福与“团圆真好”；主动用节后早餐和具体工作替代。
-    climax_test: 高点是共享食物变成过量，发生意义变化，不是最亮的烤箱或最大声的乐句。
-    ending_test: 最后一块月饼和三拍声扩展记忆，不复述主题。
-  replanning_rule: >-
-    完成约三分之一核心动画/声音草稿后停下审看：若压模手势不清楚、对白口型失真或余量没有第二层意义，先修改故事节拍和镜头，不继续批量加素材。
+    原创木质打击、拨弦与少量低音建立脉冲；骰子与压模声构成节奏，火龙和人群打开空间；烤肉和市场段增加日常的速度；海外家庭段抽薄编制；结尾保留厨房环境声和一个木模余响。
 
 research:
-  fact_scope: 只选一则地方报纸对个人家庭记忆的采访；片中不作中国家庭普遍性断言。
+  as_of: 2026-09-28
   verified_facts:
-    - source: 2006 年《生活报》报道
-      fact: 受访者韩莉回忆 80 年代末某次邻里中秋聚会，描述一米大白瓷盆、借来的模具、在食堂烤制，以及一个月早晚餐吃月饼。
-    - source: 2006 年国家级非遗名录
-      fact: 中秋节被列入第一批国家级非物质文化遗产名录；此背景不需要进入片中。
-  source_opinions: 受访者说此后没有再过那样热闹忙碌的中秋；这是个人回忆。
-  author_analysis: 食物的剩余把节日晚间的劳动带回日常时间。
-  uncertainty: 报道没有给出聚会的确切年份；只使用“80 年代末”。台词属创作演绎。
+    - 中秋日期按农历八月十五，公历日期每年变化；当日接近满月，但不保证与天文满月时刻完全重合。
+    - 中秋作为节日逐渐形成。赏月在唐宋时期发展，宋代出现更普遍的城市节庆实践；学者对具体“形成朝代”的划分并不完全一致。
+    - 香港天文台记录，中秋期间的天文满月常在农历十五或十六，也可能在十七；节日日期与精确满月时刻不是同一概念。
+    - 关于“月饼”与中秋的关系需分开表述：宋代资料中的同名饼食未必已是固定节令食品；明代材料有较清楚的八月馈赠/供月记载。研究者对具体成为节令食品的时间仍有不同判断。
+    - 香港大坑火龙舞由社区成员制作、搬运并在街巷中表演；年度规模数字会变动。
+    - 闽南博饼以掷骰子决定会饼奖项；海外社群也把活动带入当地中秋聚会。常见历史起源故事属于地方传说。
+    - 台湾中秋烤肉是近几十年普及的实践，广告、零售和户外休闲等因素均被报道，唯一创始时刻未被证实。
+    - 苏州鲜肉月饼呈现现烤、季节性购买与传统/新馅并存；不能外推为各地月饼的共同做法。
+    - 芝加哥移民长者口述记忆包括儿时灯笼、月饼、等月亮及在美国重建社区；这是受访者的个人记忆。
+  source_opinions:
+    - “中秋就是团圆节”是常见解释，但不等于每个人都有相同家庭经验。
+    - 月饼何时成为中秋节令食品的学术解释仍有分歧；影片把“可见的文献证据”与“习俗最初出现”分开。
+    - 关于节日形成的精确年份、烤肉风潮的单一源头、博饼的郑成功起源故事，分别属于有争议解释、简化叙事或地方传说。
+  author_analysis: 节庆物件不是固定不变的象征；同一日期可以进入休闲、商业、家务、社区表演、迁移记忆和新家庭习惯。
+  uncertainty:
+    - 相关历史是长期演变，片中不使用“某年某人发明中秋”叙述。
+    - 如果成片引用火龙人数、长度或香枝数量，必须注明所对应的年份和报道来源。
+    - 不把一次家庭口述或一次地方活动推广成整个华人社群的习惯。
 
 cases:
-  - id: harbin-neighbor-mooncakes
-    source: sources.md#生活报记者采访不同年龄的人听他们讲述我的苦乐中秋
-    portrayal: anonymous illustrated reconstruction of one published memory
-    character_lines_are_original: true
+  - id: xiamen_bobing
+    source: sources.md#地方习俗食物与现实经验
+    purpose: 用骰子和瓷碗呈现规则、机会与共同分享的动作。
+    portrayal: 地方社区活动的情境重构；起源传说不得标成史实。
+  - id: tai_hang_fire_dragon
+    source: sources.md#地方习俗食物与现实经验
+    purpose: 显示节日动作需要一群人协调、制作和搬运。
+    portrayal: 依据社区/旅游报道的街巷实践重构，不生成历史档案。
+  - id: taiwan_mid_autumn_bbq
+    source: sources.md#地方习俗食物与现实经验
+    purpose: 看一种现代习俗如何由广告、市场、休闲和家庭选择共同扩散。
+    portrayal: 烤肉普及的具体路径存在多种解释，画面不指定唯一创始事件。
+  - id: suzhou_fresh_meat_mooncake
+    source: sources.md#地方习俗食物与现实经验
+    purpose: 让季节性食品通过师傅、市场排队、现烤和买菜路线进入今天。
+    portrayal: 一地案例，不把口味说成普遍。
+  - id: chicago_diaspora_elders
+    source: sources.md#地方习俗食物与现实经验
+    purpose: 观察工作日、移民距离与社区组织如何改变家庭节日实践。
+    portrayal: 口述记忆只归属采访者；不复刻其身份肖像。
 
 structure:
-  opening_voiceover: 一场中秋聚餐最久的余音，可能是一个月的早饭和晚饭。
-  shot_count_target: 10
-  action_beats:
-    - beat: 分馅
-      preparation: 两只手把馅团大小校准
-      initiation: 舅舅把馅球放到面皮中央
-      contact: 指腹收拢面皮
-      result: 一盘饼坯排满
-      reaction: 母亲移动空位
-      afterglow: 桌面上只留一圈面粉
-    - beat: 压模与敲出
-      preparation: 手蘸粉、把模具转正
-      initiation: 拇指压下
-      contact: 木模落在桌面
-      result: 饼坯从模具脱开
-      reaction: 孩子探头查看花纹
-      afterglow: 面粉被手掌擦开
-    - beat: 次月早餐
-      preparation: 打开纸盒
-      initiation: 刀压进酥皮
-      contact: 饼屑落到碗边
-      result: 再次分成两半
-      reaction: 勺停一下
-      afterglow: 窗外日常的晨声继续
+  - section: 声音先于日期（0–0:24）
+    purpose: 用相反的地方动作建立谜面，暂不说节日定义。
+  - section: 这个日期怎样落在秋天（0:24–1:03）
+    purpose: 清楚说明农历八月十五、秋季与公历浮动，避免“每年就是同一个公历日”。
+  - section: 节日不是某日发明（1:03–1:40）
+    purpose: 用少量历法/文献细节说明赏月、秋祀和都市节庆长期叠加；不把神话当史实。
+  - section: 让习俗变成动作（1:40–2:52）
+    purpose: 博饼、火龙和烤肉分别呈现机会游戏、集体表演和现代商业/休闲扩散。
+  - section: 食物进入城市与迁移（2:52–3:58）
+    purpose: 苏州现烤月饼、礼盒/零售、海外工作日和社区记忆展示传统如何改写。
+  - section: 第二天还在吃（3:58–4:30）
+    purpose: 回到一户日常早餐，用余下食物让“每一代重做传统”成为具体行为。
+
+shots:
+  - id: opening_dice
+    time: 0:00–0:04
+    action: 六枚骰子落入瓷碗，弹两次停住；镜头不先展示完整人物。
+    motion: 真人手部动作或高保真 I2V，骰子接触和停顿必须明确。
+    sound: dice_porcelain Foley 为前景；音乐只留一次低木音。
+  - id: opening_fire_dragon
+    time: 0:04–0:08
+    action: 多人肩抬火龙过街，香火烟和人群转身随龙移动。
+    motion: 稳定横移跟拍，搬运者步伐一致但不军阵化。
+    sound: 搬运脚步、观众后退、火龙摩擦与人声远近变化。
+  - id: opening_grill
+    time: 0:08–0:12
+    action: 一家人轮流翻动食物，烟遮住镜头后接到烤炉近景。
+    motion: 手臂、烤夹和烟同步，保留一次食物翻面接触。
+    sound: 真正烤架/食物 Foley 优先，音乐退后。
+  - id: opening_pastry
+    time: 0:12–0:16
+    action: 苏式鲜肉月饼刚出炉，师傅夹起，一名顾客掰开酥皮。
+    motion: 手和热气连续，酥屑落到纸袋。
+    sound: 烤炉门、夹具、脆酥断裂声。
+  - id: opening_lantern
+    time: 0:16–0:20
+    action: 新加坡社区灯展/儿童提灯穿过摊位人流，镜头贴着灯笼的摆动。
+    motion: 儿童步态和灯笼摆动分开，有清晰空间深度。
+    sound: 纸灯轻晃、街市、远处现场活动。
+  - id: opening_commute
+    time: 0:20–0:24
+    action: 海外下班者在普通厨房切开一小块月饼，外套仍搭在椅背。
+    motion: 开袋、放刀、切开和抬眼一气呵成。
+    sound: 纸盒、刀、房间声；音乐落下主节奏。
+  - id: calendar
+    time: 0:24–1:03
+    action: 手翻过农历月份，八月十五对应不同公历日期；夜空用实拍月相/纸片叠印呈现。
+    motion: 纸页与笔迹手工变化，日期由后期制作。
+    sound: 纸张翻动、铅笔划线、稀疏旁白。
+  - id: historical_context
+    time: 1:03–1:40
+    action: 历法、秋季谷物和城市赏月文献互相叠入桌面，不出现神话拟历史表演。
+    motion: 真实纸张翻页、档案图像/文字由剪辑叠加。
+    sound: 页面、秋风与轻微市场底噪。
+  - id: bobing
+    time: 1:40–2:04
+    action: 不同年龄的手轮流掷骰、认点、取饼并把奖品推回共桌。
+    motion: 四段 action beats；骰子结果要读得清楚。
+    sound: 瓷碗骰子单独拟音，笑声不盖过规则说明。
+  - id: fire_dragon
+    time: 2:04–2:28
+    action: 社区成员搬龙、穿香、起龙、过弯、放低肩膀休息。
+    motion: 关键弯道以真人 motion reference 与连续 I2V/V2V 控制；失败则拆镜，不用静帧代替。
+    sound: 香枝、布面、脚步、街巷回声。
+  - id: taiwan_bbq
+    time: 2:28–2:52
+    action: 住家骑楼/街边烤架点起，家庭成员安排座位、烤肉、端菜。
+    motion: 从搬炉、点火、摆座到入席形成完整动作链。
+    sound: 炭火、夹具、邻里声；不得用正弦波替代。
+  - id: suzhou_market
+    time: 2:52–3:24
+    action: 面团起酥、包馅、烤制、取饼；顾客从买菜路线停下买一袋。
+    motion: 手部近景与完整市场走动双景，不把烘焙压成说明字幕。
+    sound: 擀面、包纸、炉门、排队人群。
+  - id: migration
+    time: 3:24–3:58
+    action: 移民长者记忆与城市社区活动并置；用手、桌面和灯笼建立记忆，不模拟受访者肖像。
+    motion: 真实社区可授权素材或演员重构；明确情境重构。
+    sound: 原创短对白/旁白，室内外空间音渐变。
+  - id: next_morning
+    time: 3:58–4:30
+    action: 第二天早餐，剩下的月饼被切开、装进通勤袋；一个人发消息问朋友是否留下一块。
+    motion: 从桌面到门口完成动作，人物有听/看/回应。
+    sound: 刀、纸袋、清晨住宅底噪；音乐仅留开场木音动机。
 
 motion:
-  authored_for: main line-animation performance; no frozen-art substitute
-  viseme_set: closed, open-a, round-o, teeth-i, narrow-e
-  body_performance: hands lead, head turn listens, torso shifts weight, blink/pause is held only when motivated by the line
-  continuity: fixed clothes/hair/line weight/prop size across all cuts; mouths frame-accurate to final mix
+  poc_required_before_full_production: true
+  poc_duration_seconds: 22
+  poc_duration_range_seconds: [20, 25]
+  poc_status: queued_after_gpt_music_film_poc
+  asset_manifest: assets/asset_manifest.json
+  poc_sequence:
+    - asset: fire_dragon_corner
+      target_seconds: 9
+      action: people carry the fire dragon around the Tai Hang street corner with coordinated steps, visible weight shifts and smoke trailing continuously
+    - asset: home_mooncake_share
+      target_seconds: 10
+      action: a family member cuts a mooncake, passes a piece to another person, and receives it; show hands, response and warm domestic movement
+    - asset: lunar_date_anchor
+      target_seconds: 3
+      action: show the verified calendar anchor “农历八月十五” as an in-world paper note across the street-to-home transition; no explanatory title card
+  narration_in_poc: none
+  poc_test: >-
+    20–25 秒必须同时看到火龙多人协作绕过街角的连续动作和家庭切分、递接月饼的完整动作。全段检验统一纸本水彩线条、身体连续性与重量、环境转换、落步/切酥皮的同步 Foley、生活空间声、动作节奏与音乐的让位关系；即使无旁白也能理解街上舞火龙、家中分月饼都发生在农历八月十五。
+  character_performance: >-
+    先定角色与声线，再按真实对话音频标注简化 viseme；台词避免正面长讲，优先看手、听者反应和身体重心。
+  action_beats: [准备, 启动, 接触, 结果, 反应, 余韵]
+  control_choice: >-
+    人物日常表演优先短段原生视频生成或 I2V/V2V 并固定角色参考；骰子、烤夹、火龙搬运若接触/重量错误导致镜头失义，采用真人动作参考、分解镜头或 3D blocking 控制。
+  continuity: 纸纹、服装、光线和物件大小跨镜一致；不以重复单张底图轻推充当人物动画。
 
 sound:
-  stems: [dialogue, voiceover, sync_foley, ambience, music]
-  recorded_archive: none
-  generated_voice_disclosure: synthetic performance, never presented as interview
+  tracks: [dialogue_or_voiceover, sync_foley, ambience, event_sound, music]
+  dialogue_or_voiceover: >-
+    一位清楚、克制的中文叙述声；仅在日期、形成脉络和证据边界处说话。若重构人物发言，标为原创台词，不冒充受访者。
+  foley_by_scene:
+    dice: 六枚真实骰子撞瓷碗、滚动、停住。
+    fire_dragon: 步伐、衣料/龙身、香火、街巷人群。
+    barbecue: 点火、夹具、食物翻面、油滴与邻里声。
+    mooncake: 烤炉、夹取、酥皮断裂、纸袋与刀切。
+  ambience: 厨房、市场、街巷和海外社区各自录制或合法采样，按空间剪辑。
+  event_sound: 木模轻敲作为跨段动机；不模拟真实报道现场的口号或广播。
+  mix_rule: 重要生活声、说明对白出现时音乐主动让位；分层保留对白、同步拟音、环境、活动声、音乐。
+  prohibited: 所有 Foley 用正弦波/noise 伪造；同一套音效套全片。
 
 music:
-  composition: original code-synthesized score, wood tap motif and warm plucked tones
-  cue_points_seconds: {start: 0, pulse: 10, handoff: 27, gathering: 51, overload_drop: 69, breakfast_return: 82, stop: 92}
-  candidate_review: >-
-    另生成 66 BPM 替代稿，与成片 74 BPM 版按六个音乐段落比较包络 RMS：74 BPM 为 -29.2/-23.3/-22.2/-21.1/-22.1/-22.7 dB，66 BPM 为 -30.0/-23.8/-22.7/-21.9/-22.8/-22.8 dB。选 74 BPM，让制作月饼的重复动作有前进感，同时保留 69 秒后的抽薄与早餐回归；66 BPM 变化较缓。音频试听能力不可用，因此这是结构与电平包络比较，不声称完成主观听审。
+  status: queued_after_gpt_music_film_poc
+  composition: 原创轻拨弦与木质打击，约 74 BPM；建立全片段落结构，不做节日广告配乐。
+  cue_points_seconds: [0, 24, 63, 100, 172, 238, 270]
+  candidates: 至少两版，在动作清晰度、声场余地和结尾留白上比较后选。
+  listening_status: pending_local_audio_generation_and_subjective_review
 
 prompts:
-  environment_image: "Empty late-1980s Harbin workers' apartment kitchen, large white porcelain basin on a worn wooden worktable, borrowed dark wooden pastry mold, paper trays, warm practical lamp, hand-painted watercolor on cream paper, quiet and observational, wide 16:9, no people, no readable text."
-  character_reference: "Original anonymous Chinese family silhouettes for a limited hand-drawn animation; stable simple proportions, ink-brown line, muted watercolor fills, ordinary clothes, non-caricatured, side and three-quarter views, no celebrity or real-person likeness."
+  opening_dice_video: "Close view of six ivory dice tumbling into a heavy porcelain bowl on a family table; one hand releases them, dice bounce and settle; warm lived-in room, hand-painted watercolor and ink, continuous physical motion, fixed camera."
+  fire_dragon_video: "A neighborhood team carries a long glowing incense dragon around a narrow Hong Kong street corner; the carriers take coordinated real steps, smoke trails behind; tracking side view, continuous movement."
+  suzhou_food_video: "A baker lifts a hot fresh pork mooncake from a small oven and sets it in paper; a customer breaks the flaky crust over the counter; intimate close shot, warm shop light, natural hand motion."
 
-selected:
-  - asset: assets/kitchen-scene.png
-    role: main kitchen environment
-    reason: >-
-      秋叶、旧瓷盆、木模和相邻餐室保持在同一空间；覆盖为纸本水彩风格后，能与线条人物统一构图、纸纹和暖色关系。
+assets_generated: []
+selected: []
 rejected_reasons:
-  - asset: initial kitchen candidate (not copied into project assets)
+  - asset: projects/zhongqiu/final.mp4
     reason: >-
-      It showed snow, a radiator and distinctly European apartment details; the season and domestic space contradicted the reported late-summer/autumn gathering.
-  - asset: first photorealistic kitchen plate (replaced at stable asset path)
-    reason: >-
-      关键帧复看时写实室内与矢量线条人物像两层贴纸；保留原有物件关系，把当前环境图重绘为纸本水彩。
-material_review_replan: >-
-  第一轮图像只有空厨房，没有人物；因此不批量生成节俗图片，而以明确案例和动作节拍自行绘制角色，先录台词再按音频安排口型。成片复看发现环境图偏写实，角色叠加感过强；保留厨房物件和构图，将环境重绘为纸本水彩并覆盖稳定路径。复核后线条、纸纹与色域更接近，人物身体仍是简洁矢量线稿，保留有限动画质地。餐室仍视作同一户人家的相邻空间。
+      Existing 92-second short centers one family anecdote, does not explain Mid-Autumn formation or regional variation, and its main visual world repeats one kitchen plate. It is a rejected draft, not the requested introduction.
+  - asset: assets/music.wav and assets/sync_foley.wav
+    reason: Existing procedural audio does not provide the requested real-material Foley or reviewed music score.
+production_notes:
+  - Continue with the existing research; no broad research expansion. Add a source only to close a concrete shot-level fact gap.
+  - Finish and review the difficult fire-dragon plus family-detail POC before making the remaining film. If motion fails, change generation/control method while keeping the narrative action and quality bar.
+  - The local GPU is an RTX 4050 laptop card with 6 GB reported VRAM and 16 GB RAM. Check current local/open model licenses and real memory needs before installation; use free routes before considering any paid fallback.
+  - Keep the action human, tactile and continuous. Pipeline assembly may not invent primary footage or hide missing motion with a static push.
+
 qa:
-  viewing_status: >-
-    已检查全长每 8 秒审看片及说话口型、压模接触帧、月饼余量转折、次月早餐和片尾；视频解码无错误。
-  facts: >-
-    事实限定为《生活报》记录的一户哈尔滨家庭回忆；确切年份未载，旁白只说“80 年代末”。角色对白标为创作演绎，不冒充受访者原话。
-  style_and_performance: >-
-    环境已重绘为水彩纸本，线稿角色在镜头间保持服饰、头身和线宽；完整身体有眨眼、转头、抬手、接触、压模、递取动作。仍是简洁二维有限动画，人物填色比背景更平，不伪称真人级表演。
-  lip_sync: >-
-    合成对白先生成并按实际 WAV 时长定位：孩子句从 34.8 秒开始、约 2.25 秒；成人回答从 37.2 秒开始、约 3.25 秒。五类 viseme 按时间驱动，复核说话切换、字幕及听者反应帧；当前环境无法进行主观听感核查。
-  motion_and_foley: >-
-    压模准备、手指接触、模具落桌和孩子反应按动作节拍呈现；三次敲桌拟音位于 42.85、43.62、44.36 秒附近。口型与手势均为代码逐帧动画，而非静态图推拉。
-  music_and_mix: >-
-    原创配乐、同步 Foley、室内底噪和四段对白/旁白保留独立 WAV；最终成片峰值 -6.4 dBFS，音视频完整解码。当前环境不支持主观听审，已核对段落时码、声像和峰值。
-  opening_middle_climax_ending: >-
-    开场提出节日晚餐留下一个月余量的问题；中段从协作劳动转到“做得太多”；次月早餐用同一块月饼和木模三拍收尾，没有主题复述字幕。
+  status: PENDING
+  production_state: paused_by_user
+  poc: paused_by_user_waiting_for_gpt_music_film_poc
+  final_viewing: not_applicable
+  full_mix_listen: pending_poc_mix
+  action_review: not_passed
+  factual_review: research_passed_with_open_historical_uncertainty
+  ordinary_viewer_test: not_done
+  completion_rule: complete requires generated POC pass, full replacement render, full video viewing, full mix listening, motion/foley checks, factual review and viewer-value review.

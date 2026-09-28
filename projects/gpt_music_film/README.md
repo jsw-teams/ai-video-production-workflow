@@ -1,17 +1,7 @@
-# 从一句话到一项事
+# Could You Just…
 
-一支约 105 秒、无旁白、音乐驱动的 audiovisual film。影片把 GPT 的变化呈现为人交给系统的工作尺度：预测/续写文本、带上下文的提示、轮次对话、多模态输入、工具调用、延长推理，再到由计算机界面执行的多步任务。它不把不同产品年份排成说明卡片。
+An original English office-pop song and music video. A worker first asks AI to fix one sentence; a manager then spends the saved time on new assignments; agents finally ask the worker to check and approve their work. The recurring line changes direction while verification and accountability stay with the person.
 
-技术节点依据 OpenAI 官方发布资料。中间的“任务接力”是作者分析，不等于模型脱离用户、工具或执行环境自行工作。
+Production is in progress. The first gate is three locally generated full-song candidates, an audible comparison, and a 22-second Verse 2 → Pre-Chorus 2 → Chorus 2 POC built from the selected song’s actual timing. POC video: `assets/poc_clip.mp4`. Final delivery path: `final.mp4`.
 
-## 文件
-
-- `final.mp4`：完整成片
-- `project.yaml`：创作策划、事实/分析区分、音乐结构、视觉语法与 QA 记录
-- `sources.md`：官方研究与产品节点
-- `pipeline.py`：本项目的渲染入口（生成后）
-- `assets/`：本地生成的图形、音乐 stems 与中间素材；不作为仓库素材库
-
-## 观看问题
-
-模型是否只是越来越会说话，还是人开始把越来越完整的一段工作托付给它？影片用同一只人手在输入、等待、查看和批准之间的位置变化回答。
+The rewritten lyric sheet is [assets/song_lyrics.txt](assets/song_lyrics.txt). Creative structure, evidence boundaries, asset state and review gates are in [project.yaml](project.yaml); sources are in [sources.md](sources.md). Hardware and installed-tool findings are recorded in the repository-root [hardware_report.json](../../hardware_report.json).
