@@ -1,0 +1,37 @@
+{
+  "status": "technical_decode_pass",
+  "output_path": "final.mp4",
+  "ffprobe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "24/1"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "195.000000",
+        "size": "18318121"
+    }
+  },
+  "decode_stderr": "",
+  "delivery_compression": "H.264 CRF 27 (slow); original AAC stream copied without re-encoding",
+  "source_picture_ssim_all": 0.991759,
+  "audio_level": {
+    "mean_volume_db": -17.1,
+    "max_volume_db": -1.5,
+    "ffmpeg_volumedetect_exit_code": 0
+  },
+  "subjective_review": "Visual contact sheet and sample listening are separate review steps; assistant runtime had no audio-input support."
+}

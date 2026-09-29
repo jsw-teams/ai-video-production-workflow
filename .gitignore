@@ -1,4 +1,4 @@
-# Local production material and delivery binaries stay in the workspace.
+# Large generated audio and working renders stay local; compressed final MP4s are versioned below.
 projects/*/assets/
 !projects/gpt_music_film/assets/
 projects/gpt_music_film/assets/*
@@ -26,3 +26,7 @@ __pycache__/
 !projects/zhongqiu/assets/render_dice_scene.py
 !projects/zhongqiu/assets/create_voiceover.ps1
 !projects/zhongqiu/assets/audio/
+!projects/guoqing/final.mp4
+!projects/gpt_music_film/final.mp4
+!projects/zhongqiu/final.mp4
+!projects/gpt_music_film/assets/final_qa.json

@@ -75,20 +75,23 @@
       "purpose": "Assembled illustrated documentary short",
       "source_or_license": "Project-generated illustrations, verified official date sources, licensed sound cues",
       "generation_method": "FFmpeg assembly, typography, designed scene movement and audio mix",
-      "status": "rendered_local_qa_pass",
+      "status": "compressed_and_full_decode_verified",
       "provider_used": "FFmpeg 8.1.2 local assembly",
       "output_path": "final.mp4"
     }
   ],
   "delivery": {
-    "status": "rendered_local",
+    "status": "compressed_and_versioned",
     "output_path": "final.mp4",
     "review_path": "review.jpg",
-    "duration_seconds": 75.968,
+    "duration_seconds": 75.958,
+    "size_bytes": 12211934,
     "video": "1920x1080, 24 fps, H.264/yuv420p",
     "audio": "AAC stereo, 48 kHz; offline narration, CC0 city/crowd/firework sound",
     "music": "No music bed used in this render.",
-    "qa": "ffprobe confirmed audio and video streams; full FFmpeg decode passed.",
+    "encoding": "H.264 CRF 27 (slow); original AAC stream copied without re-encoding.",
+    "git_versioned": true,
+    "qa": "FFprobe and full FFmpeg decode passed; compressed-vs-source frame SSIM All 0.984914.",
     "provider_used": "FFmpeg 8.1.2 local assembly and motion graphics"
   }
 }

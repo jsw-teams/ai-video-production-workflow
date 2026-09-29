@@ -18,7 +18,11 @@ production:
   narration: Offline Windows System.Speech, Microsoft Zira Desktop
   sound: Three Freesound CC0 previews for generic city ambience, crowd, and a distant firework
   music: No music bed in this render
-  assets_local_and_ignored: true
+  downloaded_audio_and_working_renders_local_and_ignored: true
+  storyboard_sheets_versioned: true
+  final_video_encoding: H.264 CRF 27 (slow); original AAC audio stream copied
+  final_video_size_bytes: 12211934
+  final_video_git_versioned: true
 sequence:
   - id: opening_question
     time: 0-8
@@ -38,5 +42,5 @@ sequence:
 sources: sources.md
 manifest: asset_manifest.json
 script: pipeline.py
-delivery: final.mp4
+delivery: final.mp4 (compressed H.264/AAC, 12,211,934 bytes, tracked in Git)
 review: review.jpg

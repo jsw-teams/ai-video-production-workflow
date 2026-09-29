@@ -106,11 +106,16 @@ production:
     final_video: final.mp4
     contact_sheet: review.jpg
     qa_report: assets/final_qa.json
-  git_delivery: "Large audio and video deliverables remain ignored; review.jpg is the compact, versioned final contact sheet. README records local video and audio delivery paths."
+  git_delivery: "The 18,318,121-byte H.264 CRF 27 final.mp4, compact review.jpg and storyboard sheets are versioned; the original AAC soundtrack is copied intact, while the selected full-song WAV and working renders remain local and ignored."
 
 qa:
   status: passed
   full_song_decode: passed
   audio_level_review: passed
   visual_contact_sheet: generated_and_inspected
+  compressed_final:
+    size_bytes: 18318121
+    encoding: H.264 CRF 27 (slow); original AAC stream copied
+    source_picture_ssim_all: 0.991759
+    full_stream_decode: passed
   human_subjective_listening: "Unavailable in assistant audio-input channel; explicitly disclosed above."

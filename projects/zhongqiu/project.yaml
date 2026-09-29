@@ -41,13 +41,15 @@ production_files:
 
 delivery:
   final_video: projects/zhongqiu/final.mp4
-  repository_policy: final video and large generated/intermediate media remain local and ignored; review.jpg and small production documents are versioned.
+  repository_policy: compressed 24,727,596-byte final video, storyboards, review.jpg, and small production documents are versioned; large generated audio and intermediate media remain local and ignored.
 
 qa:
   status: pass
   full_decode: pass
   duration_seconds: 189.375
-  video_size_bytes: 62768827
+  video_size_bytes: 24727596
+  compression: H.264 CRF 27 (slow); original AAC stream copied without re-encoding
+  source_picture_ssim_all: 0.985008
   average_audio_level_dbfs: -20.0
   maximum_audio_peak_dbfs: -1.4
   review_sheet: review.jpg
@@ -55,4 +57,4 @@ qa:
   limitations:
     - Only the dice-and-bowl action uses physical character/prop simulation; other generated people remain illustrated plates with camera movement, not continuous character animation.
     - Generic licensed street footsteps and frying sound are used as background texture; no event-specific Hong Kong recording or authentic Taiwan barbecue field recording is claimed.
-    - Final video and large media inputs stay local under the repository's existing .gitignore convention; the 62.8 MB video is not versioned.
+    - Compressed final video is versioned; original large media inputs stay local under the repository's .gitignore convention.

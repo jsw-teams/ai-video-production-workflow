@@ -7,11 +7,15 @@
 
 | 项目 | 成片与规格 | 审看图 | 主要制作方式 |
 |---|---|---|---|
-| 国庆 | [projects/guoqing/final.mp4](projects/guoqing/final.mp4)，75.968 秒，1920×1080/24 fps，30,861,987 字节 | [review.jpg](projects/guoqing/review.jpg) | 三张 ImageGen 2×2 水彩 storyboard sheet，自动裁成 12 个场景，再用 FFmpeg 做插画运镜、排字、字幕和环境声。 |
-| GPT 音乐短片 | [projects/gpt_music_film/final.mp4](projects/gpt_music_film/final.mp4)，195 秒，1920×1080/24 fps，35,357,581 字节 | [review.jpg](projects/gpt_music_film/review.jpg) | 新英文歌曲《It Was Working Yesterday》；本地 ACE-Step 生成少量候选，ImageGen 画面配合代码排版的 18 个 UI/案例 set piece。 |
-| 中秋 | [projects/zhongqiu/final.mp4](projects/zhongqiu/final.mp4)，189.375 秒，1920×1080/24 fps，62,768,827 字节 | [review.jpg](projects/zhongqiu/review.jpg) | ImageGen 水彩插画、Blender 刚体骰子段、纸面镜头运动、普通话旁白、逐句字幕、授权配乐和 Foley。 |
+| 国庆 | [projects/guoqing/final.mp4](projects/guoqing/final.mp4)，75.958 秒，1920×1080/24 fps，12,211,934 字节 | [review.jpg](projects/guoqing/review.jpg) | 三张 ImageGen 2×2 水彩 storyboard sheet，自动裁成 12 个场景，再用 FFmpeg 做插画运镜、排字、字幕和环境声。 |
+| GPT 音乐短片 | [projects/gpt_music_film/final.mp4](projects/gpt_music_film/final.mp4)，195 秒，1920×1080/24 fps，18,318,121 字节 | [review.jpg](projects/gpt_music_film/review.jpg) | 新英文歌曲《It Was Working Yesterday》；本地 ACE-Step 生成少量候选，ImageGen 画面配合代码排版的 18 个 UI/案例 set piece。 |
+| 中秋 | [projects/zhongqiu/final.mp4](projects/zhongqiu/final.mp4)，189.375 秒，1920×1080/24 fps，24,727,596 字节 | [review.jpg](projects/zhongqiu/review.jpg) | ImageGen 水彩插画、Blender 刚体骰子段、纸面镜头运动、普通话旁白、逐句字幕、授权配乐和 Foley。 |
 
-三支成片都做了 FFprobe 检查和从头到尾的 FFmpeg 解码，均为 H.264/AAC 并通过解码。中秋管线另记录了平均音量 −20.0 dBFS、峰值 −1.4 dBFS；GPT 管线记录 −17.1 dBFS、峰值 −1.5 dBFS。最终视频、模型生成音频和部分渲染素材按现有 `.gitignore` 约定留在本地；README 标出了交付路径。三个 contact sheet 与小型生产文件已入库。
+三支成片都做了 FFprobe 检查和从头到尾的 FFmpeg 解码，均为 H.264/AAC 并通过解码。中秋管线另记录了平均音量 −20.0 dBFS、峰值 −1.4 dBFS；GPT 管线记录 −17.1 dBFS、峰值 −1.5 dBFS。制作提交最初按既有忽略规则把视频留在本地；后续收到压缩推送要求后，重新编码了画面、保留 AAC 音轨，并将压缩版纳入 Git。
+
+## MP4 压缩与 Git 交付
+
+三支画面均以 H.264 CRF 27（slow）压缩，原 AAC 音轨直接复制，没有再做有损音频编码。三支压缩版分别缩小 60.43%、48.19%、60.61%，总大小从 128,988,395 字节降到 55,257,651 字节（减少 57.16%）。压缩前后画面 SSIM All 分别为 0.984914、0.991759、0.985008；每支压缩文件完整解码通过，并检查了含日期文字、案例 UI 和中文字幕的抽帧。成片现已纳入 Git，音频 WAV、生成图像和中间渲染仍由 `.gitignore` 留在本机。
 
 ## 哪些方法真正有效
 
@@ -45,6 +49,6 @@
 
 ## 仍然存在的限制
 
-- 三支 `final.mp4` 当前都是本机交付，仓库保留代码、旁白/歌词文本、来源、manifest、QA 报告和 review sheet；没有把 30.9 MB、35.4 MB、62.8 MB 的最终视频或模型权重推入 Git。
+- 三支压缩版 `final.mp4` 已纳入 Git；较大的原始音频、生成素材和中间渲染仍是本机文件。仓库没有加入模型权重。
 - 国庆片没有音乐床；中秋只有骰子段做了完整的物理动画，火龙与烤肉没有真实地方录音；GPT 的音频没有经过本运行时的主观试听。三支作品都是明确的插画/动画表达，不是实拍纪录片。
 - 完整来源边界和各片剩余细节分别见 [国庆](projects/guoqing/sources.md)、[GPT 音乐短片](projects/gpt_music_film/sources.md)、[中秋](projects/zhongqiu/sources.md)。

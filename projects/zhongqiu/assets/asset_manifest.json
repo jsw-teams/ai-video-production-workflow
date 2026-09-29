@@ -70,10 +70,12 @@
       "output": "final.mp4",
       "status": "rendered_and_technical_qa_pass",
       "duration_seconds": 189.375,
-      "size_bytes": 62768827,
+      "size_bytes": 24727596,
       "video": "H.264 1920x1080 24 fps",
       "audio": "AAC 48 kHz stereo; measured peak -1.4 dBFS",
-      "local_only": true
+      "local_only": false,
+      "delivery_compression": "H.264 CRF 27 (slow); original AAC stream copied without re-encoding. Compressed MP4 is versioned in Git.",
+      "source_picture_ssim_all": 0.985008
     }
   ],
   "not_used": [

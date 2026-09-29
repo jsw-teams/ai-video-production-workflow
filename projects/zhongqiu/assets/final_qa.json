@@ -3,7 +3,9 @@
   "output": "final.mp4",
   "duration_seconds": 189.375,
   "target_seconds": 189.375,
-  "size_bytes": 62768827,
+  "size_bytes": 24727596,
+  "delivery_compression": "H.264 CRF 27 (slow); original AAC stream copied without re-encoding",
+  "source_picture_ssim_all": 0.985008,
   "streams": [
     {
       "codec_name": "h264",

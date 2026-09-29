@@ -79,10 +79,13 @@
     {
       "id": "final_video",
       "purpose": "Locally delivered complete 1080p music video",
-      "source_or_license": "Locally assembled from selected song and project artwork; ignored by Git because of size",
-      "generation_method": "pipeline.py FFmpeg assembly, phrase overlay, audio transcode and QA",
+      "source_or_license": "Locally assembled from selected song and project artwork; compressed delivery is versioned in Git",
+      "generation_method": "pipeline.py FFmpeg assembly and phrase overlay; final H.264 CRF 27 video encode, original AAC stream copy and full decode QA",
       "output_path": "final.mp4",
-      "status": "rendered_and_qa_passed"
+      "status": "compressed_versioned_full_decode_passed",
+      "size_bytes": 18318121,
+      "delivery_compression": "H.264 CRF 27 (slow); original AAC stream copied without re-encoding",
+      "source_picture_ssim_all": 0.991759
     },
     {
       "id": "review_contact_sheet",

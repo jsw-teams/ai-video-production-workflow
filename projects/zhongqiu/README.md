@@ -1,7 +1,7 @@
 # 同一个节日，许多种动作
 
 **状态：** 完整成片已制作并通过技术 QA。
-**本地交付：** [`final.mp4`](final.mp4)（约 3 分 9 秒，1920×1080，24 fps，普通话旁白）
+**交付：** [`final.mp4`](final.mp4)（24,727,596 字节，压缩后的 H.264/AAC 版本已纳入 Git；约 3 分 9 秒，1920×1080，24 fps，普通话旁白）
 **审看图：** [`review.jpg`](review.jpg)
 
 影片从骰子、火龙、烤肉、月饼和家庭分享切入，再解释农历八月十五、节日长期形成的过程、月饼文献证据的边界，以及厦门、香港、台湾、苏州和海外家庭各自不同的实践。结尾回到同一节日时间如何进入不同私人生活，不要求观众重复同一种习俗。
@@ -23,4 +23,4 @@ python pipeline.py
 
 管线渲染插画镜头、排字幕、装配 Blender 动作镜头、混合旁白/音乐/Foley，输出 H.264 视频、contact sheet 与 [技术 QA 报告](assets/final_qa.json)。逐段剪辑表和资产来源见 [edit_timeline.json](assets/edit_timeline.json) 与 [asset_manifest.json](assets/asset_manifest.json)；事实依据与不确定性边界见 [sources.md](sources.md)。
 
-成片和大体积生成音频/视频保存在本地工作区并由 Git 忽略；代码、旁白文本、剪辑表、来源、manifest、QA 报告与审看图进入仓库。完整依赖和工具盘点见仓库根目录的 [hardware_report.json](../../hardware_report.json)。
+压缩后的最终 MP4 使用 H.264 CRF 27，原 AAC 音轨直接复制，并与 storyboards 插画、代码、旁白文本、剪辑表、来源、manifest、QA 报告和审看图一并纳入仓库；大型原始生成音频与中间渲染仍保存在本地工作区并由 Git 忽略。压缩画面相对源片 SSIM 为 0.985008，完整解码通过。完整依赖和工具盘点见仓库根目录的 [hardware_report.json](../../hardware_report.json)。
