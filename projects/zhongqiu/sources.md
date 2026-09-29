@@ -20,3 +20,19 @@
 - 来源观点：习俗起源解释、节日的团圆象征、商业活动对风俗的影响程度，都归属各来源，不写成毫无争议的定论。
 - 作者分析：节日持续不是因为所有家庭复制同一脚本，而是同一日期不断把天文周期、季节、食物、劳动和关系带入当代生活。
 - 重构边界：未获授权前不用真实人物肖像、采访音频或档案视频。生成场景标为情境重构；采访事实只支持来源明确记载的动作和记忆，不补写人物台词或动机。
+
+## 成片声音素材与许可
+- **骰子滚动：** qubodup, [Rolling Dice](https://freesound.org/people/qubodup/sounds/189321/), 14.640 秒，CC0。用于开场和博饼段的近景滚动声。
+- **瓷器碰响：** OwlStorm, [Kitchen Dish Clank](https://freesound.org/people/OwlStorm/sounds/209009/), 0.753 秒，CC0。用于开场碗沿轻碰。
+- **瓷碗内滚动：** Anthousai, [marbles – rolling around 33cm ceramic bowl – handful](https://freesound.org/people/Anthousai/sounds/448179/), 5.995 秒，CC0。用于骰子落碗的延续材质声。
+- **酥皮/刀切：** labailey, [cutting a pastry.wav](https://freesound.org/people/labailey/sounds/79031/), 7.801 秒，CC0。用于月饼食物段；画面是生成式情境重构，不声称录音来自片中地点。
+- **煎锅食物声：** Mixkit, [Frying fish on a hot pan](https://mixkit.co/free-sound-effects/food/)（素材 ID 123，22.52 秒），[Sound Effects Free License](https://mixkit.co/license/modal/sfxFree/)。它提供通用的食物煎制声，用于烤肉章节的低层材质，不冒充台湾中秋现场录音。
+- **城市脚步环境：** Mixkit, [Street ambience with walking people](https://mixkit.co/free-sound-effects/public-places/)（素材 ID 375，47.08 秒），[Sound Effects Free License](https://mixkit.co/license/modal/sfxFree/)。作为泛化街巷底层，不标作香港大坑现场录音。
+- **背景音乐：** Eugenio Mininni, [Sun and His Daughter](https://mixkit.co/free-stock-music/world/)（Mixkit 条目列时长 2:48），[Stock Music Free License](https://mixkit.co/license/modal/musicFree/)。经旁白与画面剪辑后使用；影片尾段提前淡出，不单独发布音轨。
+- **未采用的本地旧音频：** `assets/audio/grill-sizzle.mp3` 与 `hong-kong-dragon-drums.mp3` 的许可来源未能核实，因此不进入成片。片中没有伪造火龙现场鼓乐、广播或受访者声音。
+
+## 制作出处
+- 八张独立水彩场景图由 ImageGen 生成；没有把生成文字用作史实、日期、国家名或字幕。所有史实标签与中文字幕均在剪辑阶段排版。
+- 瓷碗骰子镜头由 Blender 5.2.1 CLI / Python 场景制作，以刚体碰撞完成六枚骰子落碗和反弹；水彩/纸面风格由 Workbench 光照、粗糙材质及纸纹处理形成。该镜头是三维场景重构，不是现场纪录画面。
+- 普通插画镜头使用 FFmpeg 做轻微纸面镜头移动与模糊延展背景；这些是插画构图运动，不表示静态人物在真实行走。
+- 普通话旁白使用本机 Microsoft System.Speech 离线语音合成。未克隆真实人物声音。

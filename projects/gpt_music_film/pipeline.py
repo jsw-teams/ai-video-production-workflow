@@ -29,7 +29,8 @@ MIX = ASSETS / "mix.json"
 POC_OUTPUT = ASSETS / "poc_clip.mp4"
 POC_MANIFEST = ASSETS / "poc_edit_decision.json"
 POC_MIX = ASSETS / "poc_mix.json"
-CONTACT_SHEET = ASSETS / "contact_sheet.jpg"
+CONTACT_SHEET = ROOT / "review.jpg"
+FINAL_QA = ASSETS / "final_qa.json"
 
 
 def fail(message: str) -> None:
@@ -169,7 +170,7 @@ def assemble(poc: bool = False) -> None:
         str(POC_OUTPUT if poc else OUTPUT),
     ]
     subprocess.run(command, cwd=ROOT, check=True)
-    print(f"Assembled {(POC_OUTPUT if poc else OUTPUT).relative_to(ROOT)}. Subjective review is still required.")
+    print(f"Assembled {(POC_OUTPUT if poc else OUTPUT).relative_to(ROOT)}.")
     technical_qa(poc)
     contact_sheet(poc)
 
@@ -201,7 +202,29 @@ def technical_qa(poc: bool = False) -> None:
     decode = subprocess.run([ffmpeg_bin(), "-v", "error", "-i", str(output), "-f", "null", "-"], cwd=ROOT, capture_output=True, text=True)
     if decode.returncode != 0:
         fail("Technical decode failed: " + (decode.stderr.strip() or "unknown FFmpeg error"))
-    print("technical_pass only; full viewing, motion review, and full mix listening are still required.")
+    volume = subprocess.run(
+        [ffmpeg_bin(), "-hide_banner", "-i", str(output), "-vn", "-af", "volumedetect", "-f", "null", "-"],
+        cwd=ROOT, capture_output=True, text=True,
+    )
+    import re
+    volume_text = volume.stderr + "\n" + volume.stdout
+    mean = re.search(r"mean_volume:\s*(-?\d+(?:\.\d+)?) dB", volume_text)
+    peak = re.search(r"max_volume:\s*(-?\d+(?:\.\d+)?) dB", volume_text)
+    qa = {
+        "status": "technical_decode_pass",
+        "output_path": str(output.relative_to(ROOT)),
+        "ffprobe": report,
+        "decode_stderr": decode.stderr.strip(),
+        "audio_level": {
+            "mean_volume_db": float(mean.group(1)) if mean else None,
+            "max_volume_db": float(peak.group(1)) if peak else None,
+            "ffmpeg_volumedetect_exit_code": volume.returncode,
+        },
+        "subjective_review": "Visual contact sheet and sample listening are separate review steps; assistant runtime had no audio-input support.",
+    }
+    FINAL_QA.write_text(json.dumps(qa, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(json.dumps(qa["audio_level"], indent=2))
+    print(f"Full stream decode passed. QA report: {FINAL_QA.relative_to(ROOT)}")
 
 
 def contact_sheet(poc: bool = False) -> None:
@@ -217,7 +240,7 @@ def contact_sheet(poc: bool = False) -> None:
         cwd=ROOT, check=True, capture_output=True, text=True,
     )
     duration = float(probe.stdout.strip())
-    columns, rows = 4, 3
+    columns, rows = 4, 4
     thumb_w, thumb_h, label_h = 320, 180, 24
     sheet = Image.new("RGB", (columns * thumb_w, rows * (thumb_h + label_h)), "#eee7d6")
     draw = ImageDraw.Draw(sheet)

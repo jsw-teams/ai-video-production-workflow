@@ -1,4 +1,4 @@
-"""Generate the three manifest-defined full-song candidates through local ACE-Step."""
+"""Generate the new full-song candidates through the already-installed local ACE-Step service."""
 
 from __future__ import annotations
 
@@ -113,11 +113,8 @@ def audio_download_url(audio_result: dict) -> str:
 
 def generate_one(asset: dict, lyrics: str, manifest: dict) -> None:
     output_path = PROJECT / asset["output_path"]
-    match = re.search(r"/\s*(\d+)\s+BPM\s*/\s*([^/]+)", asset["scene"])
-    if not match:
-        raise RuntimeError(f"Could not read BPM/key from manifest scene: {asset['scene']}")
-    bpm = int(match.group(1))
-    key_scale = match.group(2).strip()
+    bpm = int(asset["tempo_bpm"])
+    key_scale = str(asset["key"])
     payload = {
         "task_type": "text2music",
         "model": "acestep-v15-turbo",
@@ -125,7 +122,7 @@ def generate_one(asset: dict, lyrics: str, manifest: dict) -> None:
         "lyrics": lyrics,
         "vocal_language": "en",
         "audio_format": "wav",
-        "audio_duration": float(asset["duration"]),
+        "audio_duration": float(asset["duration_seconds"]),
         "bpm": bpm,
         "key_scale": key_scale,
         "time_signature": "4",
@@ -224,7 +221,7 @@ def main() -> None:
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
     source_lyrics = LYRICS_PATH.read_text(encoding="utf-8")
     lyrics = generation_lyrics(source_lyrics)
-    candidates = [asset for asset in manifest["assets"] if asset["id"].startswith("could_you_just_song_")]
+    candidates = [asset for asset in manifest["assets"] if asset["id"].startswith("it_was_working_candidate_")]
     if args.candidate:
         requested = set(args.candidate)
         known = {asset["id"] for asset in candidates}
@@ -235,7 +232,17 @@ def main() -> None:
     for asset in candidates:
         if asset["status"] == "generated_pending_audition" or asset["status"].startswith("rejected_"):
             continue
-        generate_one(asset, lyrics, manifest)
+        try:
+            generate_one(asset, lyrics, manifest)
+        except Exception as exc:
+            asset["status"] = (
+                "generation_failed_after_local_provider_call"
+                if asset.get("provider_used")
+                else "generation_failed_before_provider_call"
+            )
+            asset["generation_error"] = f"{type(exc).__name__}: {exc}"
+            save_manifest(manifest)
+            print(f"{asset['id']} failed; continuing to the next candidate: {exc}", flush=True)
 
 
 if __name__ == "__main__":

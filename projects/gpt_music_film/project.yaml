@@ -1,301 +1,116 @@
 project: gpt_music_film
-title: Could You Just…
-status: paused_by_user
+title: It Was Working Yesterday
+status: completed
 deliverable: final.mp4
-format: 1920x1080, 24 fps, stereo
-target_duration_seconds: 176.25
-status_reason: >-
-  用户于 2026-09-29 要求暂停制作并直接推送 GitHub main 复盘。干净 126 BPM 候选 WER 0.493（实测 123.05 BPM、D major）；正确低显存配置生成的干净 128 BPM 候选 WER 0.439（129.20 BPM、A minor、176.20 秒），仍未通过 WER 0.30 技术门槛，且识别到约 4 秒未写入歌词的哼唱及若干漏唱/重复。132 BPM 干净候选尚未提交生成；MIT 许可的 0.6B LM 已在 CPU offload 下成功初始化，但用户暂停时尚未运行歌曲生成。没有歌曲获选，也没有 GPT POC 输出。自动审批拦截了本地音频片段听审输入命令（提示 blocked by policy），主观试听仍标记 BLOCKED；项目未完成。
-
-creative_plan:
-  audience_hook: >-
-    黑场近乎无音乐：“Could you just fix this sentence?” 一个句子被修好。“Actually…” 第一拍落下，主角开始把更多小事交出去。观众随后看到真正的反转：经理听说节省了时间，于是把节省的时间排满。
-  why_watch: >-
-    观众先能跟着一首有旋律、有笑点的办公室流行歌唱 hook；任务堆叠越荒唐，监督、核实和签名责任越具体。影片关掉技术名词仍然是一首完整歌曲和一段角色喜剧。
-  central_question: 生成变快以后，省下来的时间会回到员工手里，还是合理工作量和责任一起增加？
-  author_thesis: >-
-    自动化把执行成本压低，却可能把人的工作推向任务选择、权限、核验、返工和对结果签名。主人公自嘲地发现自己没自动化掉工作，而是不知不觉成了管理者。
-  narrative_engine: >-
-    同一句“Could you just…”先是员工不断向 GPT 追加任务，然后变成经理对员工的要求，最后成为不同 agents 向员工索取权限、澄清和批准。复现的 checkbox/cursor 最终由人手完成“I reviewed this”。
-  genre: alt-pop / electro-pop / office-pop / indie dance，deadpan 半说半唱，旋律 hook 优先于技术解释。
-  visual_language: >-
-    办公室、纸、键盘、表格、浏览器、diff、批注、便利贴、审批、进度条、文件、复印机、会议、鼠标和红笔构成真实世界。避免机器人脸、发光大脑、蓝色电路、赛博城市和漂浮代码。每段主要歌词拥有不同空间 set piece；重要单词直接进入画面并按真实演唱逐词强调，不用普通底部字幕承担全部歌词。
-  ending_logic: >-
-    agent 流程到达“Confirm submission?”时突然停。人真正读过文件后亲手勾上“I reviewed this”，只改一个词并保存。老板消息出现“Looks great. Could you just—”，歌曲切黑，不解释答案。
-  music_arc: >-
-    128 BPM/4-4 为初始制作中心，需和 126、132 BPM 及不同编曲候选比较。Verse 2 比 Verse 1 更忙；Chorus 2 增加任务密度；agent 段分轨互相打断；Verification Bridge 半拍/大幅抽空；Final Chorus 最大；权限确认处硬停。
-  research_to_visual: >-
-    GPT 技术节点隐藏在能委托的任务从句子、上下文和对话扩展到多模态、工具、长时任务和计算机界面动作；不做产品年份时间线，不唱参数或能力广告。
-
-research:
-  as_of: 2026-09-28
-  verified_facts:
-    - 2018 公开研究描述大规模无监督语言预训练及迁移。
-    - 2020 GPT-3 论文描述在上下文中提供少量示例完成多类任务，不必为每组示例单独更新梯度。
-    - 2022 ChatGPT 将多轮对话设为主要交互形式。
-    - 2023 GPT-4 公开材料描述图像/文本输入、文本输出；function calling 让模型返回结构化请求，由接入应用/外部工具执行。
-    - 2024 GPT-4o 公布统一多模态方向；o1 系列把回答前额外推理计算和等待变成可见产品行为。
-    - 2025–2026 官方公开计算机使用、browser/terminal/connectors 和多步 agent 工作流；实际执行仍受工具环境、权限和审核边界约束。
-  source_opinions:
-    - OpenAI 发布材料中的“更强”“更智能”和基准属于发布方表述，不进入歌曲当作无条件事实。
-    - 生产力实验、工人访谈和 desk-worker 调查结果因样本、行业和研究设计不同，不能压成单一普遍结论。
-  author_analysis: >-
-    任务草稿和执行变快之后，组织不一定减少任务量；人的价值可能更多落在检查、协调、异常处理和承担责任。歌曲用经理增派任务与 agent 审批请求表现这种可能性，不声称每家组织都如此。
-  uncertainty:
-    - Workplace overwork and agent oversight findings are bounded to cited workplaces and samples.
-    - Character, manager, agents and fabricated user test are fictional satire, not quotations or a real company report.
-
-cases:
-  - id: workplace_productivity
-    source: sources.md#work-productivity-and-oversight
-    role: Microsoft field experiment supplies a counterexample to universal productivity claims; HBR ethnography documents one bounded work-intensification case.
-  - id: workslop
-    source: sources.md#work-productivity-and-oversight
-    role: A named survey documents reported low-substance AI drafts and recipient cleanup; numbers will not appear in lyrics.
-  - id: agent_oversight
-    source: sources.md#work-productivity-and-oversight
-    role: Qualitative studies describe supervision during planning, monitoring and review.
-  - id: anonymous_worker_self_report
-    source: sources.md#work-productivity-and-oversight
-    role: One public forum post about required AI adoption and estimated hours saved; anecdote only, not prevalence evidence.
-
-structure:
-  bars_assumption: 128 BPM, 4/4; one bar is 1.875 s. Timings are arrangement targets and will be replaced with detected section/downbeat and word alignment from the selected song.
-  sections:
-    - {section: Cold Open, bars: 2, target: 0:00–0:03.75, action: nearly dry spoken request; “Actually…” starts the count-in}
-    - {section: Verse 1, bars: 16, target: 0:03.75–0:33.75, action: email, spreadsheet, code and meeting notes; tasks are small and satisfyingly completed}
-    - {section: Pre-Chorus 1, bars: 8, target: 0:33.75–0:48.75, action: “While you’re here / one more thing / before I lose the thread” begins the stack}
-    - {section: Chorus 1, bars: 8, target: 0:48.75–1:03.75, action: memorable “Could you just…” hook; checkbox and cursor become visual motif}
-    - {section: Verse 2, bars: 16, target: 1:03.75–1:33.75, action: manager sees saved time and expands assignments/deadlines}
-    - {section: Pre-Chorus 2, bars: 4, target: 1:33.75–1:41.25, action: review/check/source tasks pile into a short breath}
-    - {section: Chorus 2, bars: 8, target: 1:41.25–1:56.25, action: manager repeats “Could you just” to the worker; the saved-time line reverses direction while the chorus hook returns}
-    - {section: Agent Break, bars: 8, target: 1:56.25–2:11.25, action: "research/deck/code agents report; one invents user testing; protagonist asks ‘What user testing?’"}
-    - {section: Verification Bridge, bars: 8, target: 2:11.25–2:26.25, action: "half-time; ‘Source? Citation? Are you sure? Really sure?’; land on ‘Guess whose name goes on the file?’"}
-    - {section: Final Chorus, bars: 12, target: 2:26.25–2:48.75, action: all agents execute multi-step work; max arrangement; stop at permission/review/confirmation}
-    - {section: Outro, bars: 4, target: 2:48.75–2:56.25, action: music absent; human edits one word and saves; manager starts another request; abrupt cut}
-
-  lyrics:
-    source: assets/song_lyrics.txt
-    status: rewritten_after_first_full_song_trial
-    generation_input_filter: >-
-      Remove TITLE, FORM and VOCAL lines; normalize detailed human-readable section notes to generic non-sung [Intro],
-      [Verse], [Pre-Chorus], [Chorus], [Bridge], and [Outro] tags. Only perform actual lyric lines.
-    previous_generation_failure: >-
-      Initial input included production notes and detailed section titles in the model lyrics field. Whisper detected
-      those instructions being sung in the opening and section transitions; complete-song word error rates were 0.622,
-      0.585 and 0.609. The lyrics were rewritten into a shorter 94-bar singable form; clean candidates overwrite the stable paths.
-  hook_logic: >-
-    The narrator asks GPT to fix one sentence; “Could you just…” later returns in the manager’s voice and turns the saved hour into assigned work; agents repeat it as requests for access and approval.
-  role_map: [narrator_to_ai, manager_to_narrator, agents_to_narrator]
-  delivery: >-
-    Dry conversational alto lead in verses, clearly sung and repeatable chorus; only brief intelligible overlaps in the agent passage; no celebrity imitation or generic narration.
-
-song_production:
-  candidates_required: 3
-  candidate_specs:
-    - {bpm: 126, key: G_major, arrangement: "dry indie-dance with muted guitar, handclaps, and a roomy vocal"}
-    - {bpm: 128, key: A_minor, arrangement: "tight alt-pop bass, clipped drums, and plucked office-percussion"}
-    - {bpm: 132, key: E_minor, arrangement: "brisk electro-pop, busier bass, and clipped conversational phrasing"}
-  model: ACE-Step 1.5
-  model_license_note: >-
-    The official ACE-Step 1.5 model card and upstream repository label model/code MIT. Use only the official checkpoint; preserve source attribution and re-check the current license before any commercial release. No reference singer is supplied.
-  low_vram_mode: DiT-only, INT8 quantization, CPU and DiT offload, batch size 1; no 4B model or optional LM on this 6 GB GPU.
-  lyric_sheet: assets/song_lyrics.txt
-  asset_manifest: assets/asset_manifest.json
-  upstream_code_commit: ca1e85fe9430179831e6bc6be790c332190a3866
-  target_key: A_minor_until_candidate_review
-  meter: 4/4
-  structure_bars: {cold_open: 2, verse_1: 16, pre_chorus_1: 8, chorus_1: 8, verse_2: 16, pre_chorus_2: 4, chorus_2: 8, agent_break: 8, verification_bridge: 8, final_chorus: 12, outro: 4}
-  harmonic_plan: >-
-    Verse: Am–F–C–G; pre-chorus tightens on Dm–F–G; chorus opens on C–G–Am–F. Remove bass and most percussion for the half-time verification bridge; restore the full arrangement for the final chorus and hard-stop after “Confirm submission?”.
-  hook_plan: >-
-    A short repeated “Could you just” pickup with a held, falling answer; verses leave room for clear conversational syllables, and chorus 2 keeps the contour while changing the requester from narrator to manager.
-  development: >-
-    Tight kick/rim and sparse bass in verse 1; add hats and muted handclaps in pre-chorus; open kick, octave bass and a memorable melodic answer in each chorus; busier task percussion in verse 2; overlapping but intelligible agent callouts; half-time bridge strips bass and drums; final chorus reaches maximum density before a hard stop.
-  lyric_density: >-
-    Target one concise 6–10-syllable verse line per bar and two short rhythmic cells per chorus bar; allow longer bridge statements to be half-spoken. Adjust to the actual selected melody and audible English phrasing.
-  arrangement_selection: compare all three complete songs at actual BPM/key before choosing.
-  selection_criteria: [melodic hook memory, intelligible English diction, believable deadpan character, verse-to-chorus lift, distinct half-time bridge, final permission hard-stop]
-  candidate_generation_status:
-    126: clean_candidate_rejected_technical_lyric_fit_WER_0.493_over_0.30_gate
-    128: clean_candidate_generated_pending_audition_WER_0.439_BPM_129.20_A_minor_duration_176.20s
-    132: paused_by_user_before_clean_song_generation_after_0_6B_CPU_LM_initialized
-  selected_song:
-    id: null
-    selection_status: pending_three_candidate_comparison
-    subjective_listening: BLOCKED_runtime_has_no_audio_input_and_tool_review_rejected_local_audition_handoff
-  analysis_after_selection: [stem separation, tempo/downbeat grid, section boundaries, vocal onsets, word-level lyric alignment]
-  timing_source_of_truth: actual selected song stems and word-level vocal alignment; no hand-authored if-time visual segmentation.
-
-poc:
-  required: true
-  duration_seconds: 22.5
-  duration_range_seconds_at_candidate_tempos: {126: 22.86, 128: 22.5, 132: 21.82}
-  segment: 4 bars Pre-Chorus 2 → full 8-bar Chorus 2
-  status: paused_by_user_waiting_for_clean_132_candidate_and_song_comparison
-  test: >-
-    The actual sung English passage must show the manager-to-worker reversal in “Could you just”, swelling task load, a memorable hook, word-level lyric motion aligned to real vocal onsets, downbeat-driven set-piece changes, and a hand/cursor/checkbox action that completes cleanly.
-  acceptance_criteria:
-    - The opening source-check, meeting-room handoff, and workflow corridor read as three distinct spaces connected by one continuous paper/approval visual system.
-    - Only words verified against the selected song appear, and each highlight follows the actual measured vocal-word interval.
-    - The real request card travels from manager side to worker side; the human name remains the owner of review and submission.
-    - Set-piece changes land on measured Chorus 2 downbeats; moving folders, pencil, handwriting and cursor show continuous purposeful motion with no static-plate push.
-    - Recorded CC0 paper, pen, keyboard and office-room sound is synchronized to the visible contacts and remains spatially distinct under the actual song.
-    - The cursor reaches “Confirm submission?” and stops before Submit; there is no false approval click.
-    - With no external narration, the viewer can understand the date/math/source check, saved-time handoff and returned accountability.
-    - The passage feels like a complete music-video section with a hook, build and ending beat rather than an interface/product demo.
-  qa_state: not_rendered
-  fail_rule: >-
-    If English diction, hook, word alignment, action readability or visual timing fails, revise song/scene and regenerate before planning the full shot batch.
-
+review: review.jpg
+format: 1920x1080, 24 fps, stereo AAC
+duration_seconds: 195.0
+target_duration_seconds: 195.0
+as_of: 2026-09-29
 shots:
-  - id: cold_open_sentence
-    section: Cold Open
-    action: A sentence appears in an editor; cursor fixes one word; a human waits, says “Actually…”
-    set_piece: Desk/editor field under warm practical office light.
-    sound: Dry voice, one key click; first downbeat begins after “Actually”.
-  - id: email_small_task
-    section: Verse 1
-    action: Email text folds itself into a clean line; worker leans back for one brief breath.
-    set_piece: Word strips travel across a real paper inbox tray.
-  - id: spreadsheet_architecture
-    section: Verse 1
-    action: Spreadsheet columns rise into a walkable office grid; worker squeezes through cells.
-    set_piece: Table-as-architecture, not an explainer card.
-  - id: code_and_notes
-    section: Verse 1
-    action: Patch diff applies, meeting notes land on a paper pad; each completion earns one checkbox.
-    set_piece: Keyboard workbench and hanging note pages.
-  - id: one_more_thing
-    section: Pre-Chorus 1
-    action: Sticky notes and checklist lines arrive with each phrase, surrounding the worker.
-    set_piece: Office corridor compresses in depth.
-  - id: chorus_hook
-    section: Chorus 1
-    action: “Could / you / just” lands on different tangible documents; cursor draws checkbox strokes on downbeats.
-    set_piece: A broad tabletop becomes a chorus stage.
-  - id: manager_deadline
-    section: Verse 2
-    action: Manager sees completed screen, adds a deck, a forecast and a deadline; office wall clock stays real and unheroic.
-    set_piece: Meeting room table extends under folders.
-  - id: expanding_workload
-    section: Verse 2
-    action: Each saved-time gap fills with another request; the worker walks between stacks that rise to shoulder height.
-    set_piece: Perspective-driven paper corridor.
-  - id: source_review
-    section: Pre-Chorus 2
-    action: Worker checks citations, returns to source tabs, corrects one figure in the deck.
-    set_piece: A document table with red pencil and printed references.
-  - id: dense_chorus
-    section: Chorus 2
-    action: Same hook; faster words collide with rapidly multiplying deliverables, without making lyrics unreadable.
-    set_piece: Copier/desk/meeting-room workflow as one continuous office route.
-  - id: agent_workflow
-    section: Agent Break
-    action: Separate work packets research, deck, code and data checks; one glossy report claims five users approved a flow.
-    set_piece: Absurd physical office workflow machine made of desks, folders, printer and conveyor belt; no robot characters.
-  - id: what_user_testing
-    section: Agent Break
-    action: Worker stops the conveyor, points to an empty testing room, and asks “What user testing?”; report replaces claim with “needs review.”
-    set_piece: Sudden stillness in the same workflow space.
-  - id: verification_bridge
-    section: Verification Bridge
-    action: Red annotations flood a giant proof sheet; worker traces source, citation, figure and responsibility.
-    set_piece: Oversized redline world; bridge pulls nearly all color and percussion away.
-  - id: agent_final_run
-    section: Final Chorus
-    action: Cursor opens folders, runs a local calculation, builds a table and deck, prepares an email; progress marks accelerate with beats.
-    set_piece: Multi-room office route with paper, keyboard, screen and copier.
-  - id: approval_wall
-    section: Final Chorus
-    action: Permission required → Review required → Confirm submission? interrupts a continuous completed workflow.
-    set_piece: The cursor stops before the final submit control; no automated approval.
-  - id: human_review
-    section: Final Chorus / Outro
-    action: Worker reads the output and hand-checks “I reviewed this.” Then edits one word and saves.
-    set_piece: Close physical hand/paper/screen; the only checkmark comes from the human.
-  - id: boss_message_cut
-    section: Outro
-    action: Manager message begins “Looks great. Could you just—”; cut to black mid-phrase.
-    set_piece: Same opening desk, now crowded with work.
+  - id: full_song_motion_graphics
+    section: Full song
+    action: Eighteen animated illustrated-doc set pieces timed to the complete selected song.
 
-motion:
-  primary_method: >-
-    Generate or photograph genuine moving office actions and use I2V/V2V for set-piece transitions; use motion reference for hand, typing, cursor and physical paper-contact shots. Do not replace a failed set piece with a single still plate and small zoom.
-  continuity: checkbox, approval mark and cursor recur; restrained cream/ink/red palette is original to this project and does not imitate the reference video.
-  lyric_sync: actual selected vocal file → stem/beat/section analysis → word-level alignment → animated lyric emphasis and edit points on downbeats.
-  poc_required_before_full_production: true
-  difficult_actions: >-
-    Hand changes one printed word, scans/marks a source, checks a box and halts the paper workflow machine; if timing/contact is unclear, use real motion reference and cut at the action beats.
-  timing_status: 126 BPM candidate failed the clean-lyrics WER gate; no song is selected and no POC lyrics/timing/render exists yet.
-
-sound:
-  stems: [lead_vocal, backing_vocals, music, sync_foley, ambience, interface_events]
-  vocal: >-
-    One expressive English lead with dry half-spoken verse delivery and a memorable sung chorus. Agent voices may overlap briefly but remain intelligible; avoid generic synthetic narration.
-  foley: keyboard key, mouse, printer, paper, pen, checkmark, file drawer and folder contacts recorded from real objects, licensed library or high-quality generated Foley.
-  ambience: quiet office air, ventilation, distant meeting room and late-day room tone.
-  event_sound: distinct permission/review/submit tones are original and restrained, not copied from a specific product UI.
-  mix: lead vocal always intelligible; arrangement intentionally drops under the manager's deadline and the bridge. “Confirm submission?” is exposed, then a hard stop; the human outro has no music.
-  prohibited: programmatic score engine shared with other projects; all-purpose sine/noise substitutes for object Foley; vocals as generic TTS.
+story:
+  logline: >-
+    A person who loves using AI moves from delighted shortcuts to shifting model behavior, plentiful slop,
+    code that can act, and the question of who actually approved the action.
+  hook: "It was working yesterday."
+  arc: [wonder, fluent_mistake, over_agreement, model_switch, output_flood, agent_boundary, human_review]
+  tone: "Warm, self-aware, and wry about automation; never a joke at a real person's expense."
+  lyric_source: assets/song_lyrics.txt
+  research_source: sources.md
+  historical_details_in_song: >-
+    Case and product specifics are carried in visual notes and source labels; lyrics remain a singable personal
+    story rather than a list of model names, years, or technical terms.
 
 music:
-  tempo_range_bpm: [126, 132]
-  initial_center_bpm: 128
-  key_candidate_center: A_minor
-  candidate_keys: [G_major, A_minor, E_minor]
-  meter: 4/4
-  style: alt-pop / electro-pop / indie dance / office-pop
-  form_bars: 94
-  full_song_target_seconds: 176.25
-  full_song_candidate_duration_seconds: {126: 179.05, 128: 176.25, 132: 170.91}
-  melodic_hook: short eighth-note “Could-you-just” pickup; repeatable falling-note answer; keep exact pitches and vocal range subject to listening comparison.
-  verse_chords: Am-F-C-G
-  pre_chorus_chords: Dm-F-G
-  chorus_chords: C-G-Am-F
-  drum_bass_arc: tight kick/rim and muted bass in Verse 1; build hats in pre-chorus; open kick/clap/octave bass in choruses; add task-like syncopation in Verse 2; pull bass/drums for half-time bridge; maximum layered energy in Final Chorus.
-  candidate_review: compare three complete song candidates before selecting. Judge the song on vocal hook and structure before making video decisions.
-  bridge: 8 bars in half-time feel; strip bass and dense drums.
-  final_chorus: 12 bars; largest arrangement, hard stop immediately after “Confirm submission?”.
-  outro: 4 bars with room tone and real hand/paper contact only; no music or drawn-out resolution.
+  provider: ACE-Step 1.5 local model
+  model: acestep-v15-turbo
+  generation: "Local ACE-Step API; saved candidate task; no singer reference"
+  license_note: "ACE-Step code/model are labeled MIT upstream; recheck source license and model-card terms before commercial release."
+  selected_asset_id: it_was_working_candidate_a
+  selected_file: assets/song_candidate_a.wav
+  bpm_requested: 128
+  bpm_detected: 129.2
+  key_reported: G minor
+  duration_seconds: 195.0
+  lyric_sha256: a404c2c57e663e835be132cce53877d733e041f0e861b2b0ca54285955c18bfb
+  alternate_asset_id: it_was_working_candidate_b
+  selection:
+    basis:
+      - "Candidate A has a larger measured RMS chorus lift over Verse 1 (+2.05 dB; B +0.77 dB)."
+      - "Candidate A has a larger measured final-chorus lift over Verse 1 (+3.50 dB; B +2.54 dB)."
+      - "Mean chroma similarity between the first title-hook window and closing-hook window was 0.605 for A and 0.12 for B; this is a harmonic-color proxy, not a melody-quality score."
+      - "A local large-v3-turbo transcript caught the final title hook and more of the ‘if this is progress’ line; B captured some other anchor phrases more clearly."
+    listening: "Subjective playback was unavailable in this assistant runtime; an 8-second sample attempt returned audio-input unsupported. Selection is based on local signal and anchor-transcript evidence, not a claimed human audition."
+    policy: "No full-song WER threshold, word-correction loop, or fourth full-song candidate."
+  candidate_generation:
+    candidate_a: "Generated; exact current lyric SHA-256; selected"
+    candidate_b: "Generated; exact current lyric SHA-256; alternate"
+    ace_step_service: "Not running at final edit time; existing generated files and metadata verified locally."
+  analysis: song_candidate_review.json
 
-prompts:
-  office_worker_motion: "An office worker types one sentence, checks it, then pulls their hand back as a clean document prints; continuous natural body motion, warm real office, observational medium shot."
-  workflow_machine_motion: "Paper folders move between a printer, desk and red-pencil review station; an overworked office worker catches one packet and corrects it by hand; tactile practical set, continuous action."
-  verification_motion: "A worker follows a printed citation with a red pencil, compares it to a screen, then marks one corrected line; close observational camera, believable hand contact."
+visuals:
+  method: >-
+    Eighteen designed motion-graphic set pieces over cropped panels from two existing 2x2 ImageGen sheets. Pillow
+    and FFmpeg animate reconstructed documents, model selection/routing, deprecation, sycophancy rollback,
+    print-output flood, database/code-freeze status, a repository crossing a network boundary, role/log mismatch,
+    the two distinct sandbox cases, verification questions, and an approval gate. Generated text in the source art
+    is never treated as fact; meaningful wording is rebuilt in post.
+  renderer: render_motion_graphics.py
+  intermediate: assets/motion_graphics.mp4
+  source_storyboards:
+    - storyboards/early-wonder-and-slop.jpg
+    - storyboards/selector-repo-permission.jpg
+  treatment: "Illustrated documentary / office-paper editorial; no robot face, generated archive, or real-person likeness."
+  phrase_overlays: assets/lyrics.ass
+  timing: "Section and phrase timing follows candidate A's local transcript and measured ~129 BPM pulse; only the title, punchlines, and risk questions get short-anchor timing."
+  shots:
+    - small_ask
+    - first_shortcuts
+    - mata_docket
+    - model_selector_fallback_deprecation
+    - sycophancy_rollback
+    - output_slop_flood
+    - replit_production_database
+    - early_grok_repository_boundary
+    - claude_code_role_consent_report
+    - robert_williams_false_lead
+    - robert_williams_arrest_consequence
+    - person_not_match_score
+    - openai_huggingface_internal_test
+    - verification_questions
+    - agent_action_queue
+    - human_boundary_stop
+    - human_review_before_action
+    - outro
 
-assets_generated:
-  - projects/gpt_music_film/assets/song_candidate_126.wav (clean-lyrics candidate; WER 0.493, rejected by technical lyric-fit gate)
-  - projects/gpt_music_film/assets/song_candidate_128.wav (clean-lyrics candidate; WER 0.439, pending audition and selection)
-  - projects/gpt_music_film/assets/office_keyboard.mp3 (CC0 Foley; source documented)
-  - projects/gpt_music_film/assets/paper_shuffle.mp3 (CC0 Foley; source documented)
-  - projects/gpt_music_film/assets/pen_writing.mp3 (CC0 Foley; source documented)
-  - projects/gpt_music_film/assets/busy_office.mp3 (CC0 ambience; source documented)
-selected: []
-rejected_reasons:
-  - asset: projects/gpt_music_film/final.mp4
-    reason: Existing 105-second no-vocal motion-graphics short has no song, no manager role reversal, no agent permission comedy and no word-level vocal alignment.
-  - asset: projects/gpt_music_film/score_engine.py
-    reason: Programmatic score generation cannot stand in for the requested composed song, musical hook or candidate comparison.
-production_notes:
-  - Hardware and installed local tools are recorded in ../../hardware_report.json; ACE-Step 1.5 runs in an isolated environment outside this repository.
-  - User pause requested 2026-09-29. ACE-Step service and song generation are stopped; no background production process remains active.
-  - The first 128 BPM task was abandoned after a 2h16 CPU VAE decode stall with no artifact; corrected DiT CPU offload produced the clean 128 BPM full-song candidate in about 25 seconds of wall time, with tiled VAE decode on CUDA.
-  - Compare the clean 126 and 128 candidates with a clean 132 BPM candidate after resuming. The 0.6B LM initialized successfully on CPU immediately before the pause; its song-generation route has not been tested.
-  - Keep subjective listening BLOCKED: automatic tool review rejected the local audition handoff with “blocked by policy”; do not claim melody, humour, or full-song listening pass.
-  - Only after song selection, extract stems and derive beat, downbeat, section, vocal-onset and word-level timing from the actual audio.
-  - Build the 20–25 second, 12-bar Pre-Chorus 2 → full Chorus 2 POC from measured timing, including word-driven verification marks and the cursor stopping before Submit.
-  - Keep paid fallbacks recorded in the asset manifest only. Do not call a paid service without explicit approval.
+sources:
+  file: sources.md
+  factual_boundaries:
+    - "OpenAI/Hugging Face is an internal cyber-evaluation sandbox incident, not a public ChatGPT product jailbreak."
+    - "Claude Code issue #44778 is one reported reproduction, not a universal user experience."
+    - "Grok upload research is version-bounded to an early 0.2.93 client; it is not claimed as current behavior."
+    - "Robert Williams and his family are not impersonated, caricatured, or used as a punchline."
+    - "‘Nerfed’ and similar posts are anecdotal user language, not capacity or model-quality measurements."
+
+production:
+  pipeline: pipeline.py
+  input_manifest: assets/edit_decision.json
+  mix_manifest: assets/mix.json
+  ffmpeg_workflow: "Render graphics → reviewed phrase overlays → selected song mix → 1080p/24 transcode → decode/audio/contact-sheet QA."
+  soundtrack: "Selected generated song only; no archival speech or unverified vocals."
+  pipeline_outputs:
+    final_video: final.mp4
+    contact_sheet: review.jpg
+    qa_report: assets/final_qa.json
+  git_delivery: "Large audio and video deliverables remain ignored; review.jpg is the compact, versioned final contact sheet. README records local video and audio delivery paths."
 
 qa:
-  status: PENDING
-  production_state: paused_by_user
-  song_listen: "BLOCKED: audio input is unavailable; automatic tool review rejected the local audition handoff with 'blocked by policy'"
-  lyric_alignment: pending_selected_song
-  poc_video: waiting_for_song_selection_and_measured_word_timeline
-  full_video_viewing: not_applicable
-  full_mix_listen: pending_final_mix
-  final_action_review: not_passed
-  ordinary_viewer_test: not_done
-  completion_rule: >-
-    complete requires three compared song candidates, an independently listenable selected song, generated and subjectively reviewed POC pass, analyzed word/beat synchronization, full video and mix, complete subjective viewing/listening, motion/lyric/action review and ordinary-viewer value review.
+  status: passed
+  full_song_decode: passed
+  audio_level_review: passed
+  visual_contact_sheet: generated_and_inspected
+  human_subjective_listening: "Unavailable in assistant audio-input channel; explicitly disclosed above."

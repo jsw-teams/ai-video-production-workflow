@@ -1,0 +1,30 @@
+{
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "target_frames": 4545,
+  "notes": "Static watercolor plates receive slow paper-camera moves in a blurred full-frame extension. The Blender clip is retained as continuous rigid-body motion; no image pan is presented as character motion.",
+  "sequence": [
+    {"id":"opening_dice","source":"assets/dice_collision.mp4","kind":"video","frames":96,"chapter":"同一个节日 · 许多种动作"},
+    {"id":"opening_dragon","source":"storyboards/fire_dragon_tableau.jpg","kind":"image","frames":96,"move":"right","chapter":"同一个节日 · 许多种动作"},
+    {"id":"opening_grill","source":"storyboards/taiwan_bbq_tableau.jpg","kind":"image","frames":96,"move":"left","chapter":"同一个节日 · 许多种动作"},
+    {"id":"opening_mooncake","source":"storyboards/mooncake_tableau.jpg","kind":"image","frames":96,"move":"right","chapter":"同一个节日 · 许多种动作"},
+    {"id":"opening_home","source":"storyboards/overseas_home.jpg","kind":"image","frames":96,"move":"left","chapter":"同一个节日 · 许多种动作"},
+    {"id":"opening_table","source":"storyboards/bobing_tableau.jpg","kind":"image","frames":185,"move":"right","chapter":"同一个节日 · 许多种动作"},
+    {"id":"date_calendar","source":"storyboards/almanac.jpg","kind":"image","frames":267,"move":"left","chapter":"农历八月十五"},
+    {"id":"date_moon","source":"storyboards/moon_city.jpg","kind":"image","frames":267,"move":"right","chapter":"农历八月十五"},
+    {"id":"history_moon_city","source":"storyboards/moon_city.jpg","kind":"image","frames":328,"move":"left","chapter":"节日逐渐形成"},
+    {"id":"history_city_viewing","source":"storyboards/city_viewing.jpg","kind":"image","frames":329,"move":"right","chapter":"节日逐渐形成"},
+    {"id":"mooncake_evidence_a","source":"storyboards/mooncake_tableau.jpg","kind":"image","frames":284,"move":"left","chapter":"月饼也有自己的时间"},
+    {"id":"mooncake_evidence_b","source":"storyboards/overseas_home.jpg","kind":"image","frames":283,"move":"right","chapter":"月饼也有自己的时间"},
+    {"id":"bobing_table","source":"storyboards/bobing_tableau.jpg","kind":"image","frames":411,"move":"left","chapter":"厦门 · 博饼"},
+    {"id":"bobing_dice","source":"assets/dice_collision.mp4","kind":"video","frames":96,"chapter":"厦门 · 博饼"},
+    {"id":"fire_dragon","source":"storyboards/fire_dragon_tableau.jpg","kind":"image","frames":268,"move":"right","chapter":"香港大坑 · 火龙"},
+    {"id":"taiwan_bbq","source":"storyboards/taiwan_bbq_tableau.jpg","kind":"image","frames":267,"move":"left","chapter":"台湾 · 烤肉"},
+    {"id":"suzhou_mooncake","source":"storyboards/mooncake_tableau.jpg","kind":"image","frames":213,"move":"right","chapter":"苏州 · 鲜肉月饼"},
+    {"id":"overseas_home","source":"storyboards/overseas_home.jpg","kind":"image","frames":213,"move":"left","chapter":"海外家庭 · 分享"},
+    {"id":"ending_home_a","source":"storyboards/overseas_home.jpg","kind":"image","frames":335,"move":"right","chapter":"同一天，不同的私人意义"},
+    {"id":"ending_city","source":"storyboards/city_viewing.jpg","kind":"image","frames":100,"move":"left","chapter":"同一天，不同的私人意义"},
+    {"id":"ending_home_b","source":"storyboards/overseas_home.jpg","kind":"image","frames":219,"move":"right","chapter":"同一天，不同的私人意义"}
+  ]
+}

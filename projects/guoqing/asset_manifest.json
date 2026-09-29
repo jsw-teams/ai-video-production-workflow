@@ -1,0 +1,94 @@
+{
+  "project": "guoqing",
+  "title": "A Date on the Calendar",
+  "provider_note": "Storyboard images were actually generated with the available ImageGen tool and saved as compressed 2x2 JPEG sheets. No model weights are stored here.",
+  "storyboards": [
+    {
+      "id": "date_origins",
+      "path": "storyboards/history-and-date-origins.jpg",
+      "prompt": "Four neutral historical markers: a printed declaration, revolutionary city aftermath, separated island maps, and constitutional assembly. Watercolor and archival paper. No legible text or named historical portraits.",
+      "provider_used": "ImageGen",
+      "license_note": "Original generated editorial illustration; no archival implication."
+    },
+    {
+      "id": "city_rhythms",
+      "path": "storyboards/city-rhythms.jpg",
+      "prompt": "Interwoven Taipei street event, Singapore HDB neighbor preparation, US neighborhood meal beside a parade, and a rerouted city transit scene. Watercolor/ink; anonymous composite people.",
+      "provider_used": "ImageGen",
+      "license_note": "Original generated editorial illustration; not documentary footage."
+    },
+    {
+      "id": "private_days",
+      "path": "storyboards/private-days.jpg",
+      "prompt": "Transit worker reroutes buses, event crew prepares a plaza, household meal and work schedule coexist, and a person chooses a quiet side street. Watercolor/ink; no country cards.",
+      "provider_used": "ImageGen",
+      "license_note": "Original generated editorial illustration; no identifiable real person."
+    }
+  ],
+  "assets": [
+    {
+      "id": "narration",
+      "purpose": "Neutral English explanatory voiceover",
+      "source_or_license": "Windows Microsoft Zira Desktop offline speech synthesis; generated from the project script",
+      "generation_method": "Windows System.Speech; script in create_narration.ps1",
+      "status": "used",
+      "provider_used": "Microsoft Zira Desktop via Windows System.Speech",
+      "output_path": "assets/audio/narration.wav"
+    },
+    {
+      "id": "city_ambience",
+      "purpose": "City traffic bed",
+      "source_or_license": "qubodup, Freesound 223093, CC0",
+      "generation_method": "Public HQ preview downloaded from the source page",
+      "status": "used",
+      "provider_used": "Freesound CC0 source preview",
+      "output_path": "assets/audio/city-night-ambience.mp3"
+    },
+    {
+      "id": "parade_crowd",
+      "purpose": "Generic crowd waiting at a public event; not tied to one nation",
+      "source_or_license": "kvgarlic, Freesound 857740, CC0",
+      "generation_method": "Public HQ preview downloaded from the source page",
+      "status": "used",
+      "provider_used": "Freesound CC0 source preview",
+      "output_path": "assets/audio/parade-crowd.mp3"
+    },
+    {
+      "id": "firework",
+      "purpose": "Single distant celebratory firework accent",
+      "source_or_license": "Rudmer_Rotteveel, Freesound 336008, CC0",
+      "generation_method": "Public HQ preview downloaded from the source page",
+      "status": "used",
+      "provider_used": "Freesound CC0 source preview",
+      "output_path": "assets/audio/single-firework.mp3"
+    },
+    {
+      "id": "score",
+      "purpose": "Restrained original instrumental bed",
+      "source_or_license": null,
+      "generation_method": "Not generated for this render.",
+      "status": "not_used",
+      "reason": "No project-specific instrumental was generated; this render uses narration and licensed environmental sound."
+    },
+    {
+      "id": "final_film",
+      "purpose": "Assembled illustrated documentary short",
+      "source_or_license": "Project-generated illustrations, verified official date sources, licensed sound cues",
+      "generation_method": "FFmpeg assembly, typography, designed scene movement and audio mix",
+      "status": "rendered_local_qa_pass",
+      "provider_used": "FFmpeg 8.1.2 local assembly",
+      "output_path": "final.mp4"
+    }
+  ],
+  "delivery": {
+    "status": "rendered_local",
+    "output_path": "final.mp4",
+    "review_path": "review.jpg",
+    "duration_seconds": 75.968,
+    "video": "1920x1080, 24 fps, H.264/yuv420p",
+    "audio": "AAC stereo, 48 kHz; offline narration, CC0 city/crowd/firework sound",
+    "music": "No music bed used in this render.",
+    "qa": "ffprobe confirmed audio and video streams; full FFmpeg decode passed.",
+    "provider_used": "FFmpeg 8.1.2 local assembly and motion graphics"
+  }
+}

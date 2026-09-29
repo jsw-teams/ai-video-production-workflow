@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "output": "final.mp4",
+  "duration_seconds": 189.375,
+  "target_seconds": 189.375,
+  "size_bytes": 62768827,
+  "streams": [
+    {
+      "codec_name": "h264",
+      "codec_type": "video",
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "24/1"
+    },
+    {
+      "codec_name": "aac",
+      "codec_type": "audio",
+      "sample_rate": "48000",
+      "channels": 2,
+      "r_frame_rate": "0/0"
+    }
+  ],
+  "full_decode": "pass",
+  "audio_stats": {
+    "mean_volume_dbfs": -20.0,
+    "max_volume_dbfs": -1.4
+  },
+  "subjective_audio_review": "unavailable_in_current_agent_runtime; full decode, mean level and peak were measured",
+  "visual_review": "contact sheet manually reviewed; repetitive mooncake still replaced with family scene",
+  "review_sheet": "review.jpg",
+  "errors": []
+}

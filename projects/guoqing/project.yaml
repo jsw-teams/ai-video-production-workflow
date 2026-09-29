@@ -1,0 +1,42 @@
+project: guoqing
+title: A Date on the Calendar
+status: local_rendered_and_reviewed
+format: 1920x1080, 24 fps, stereo
+target_duration_seconds: 76
+language: English
+thesis: >-
+  A shared public date does not create one shared private meaning. National dates can grow from different historical events, then enter city operations, ritual, work, family routines, and non-participation.
+editorial_approach:
+  - Interweave the Taiwan, Singapore, and United States dates with city and household illustrations rather than presenting three country cards.
+  - Explain the historical markers precisely and neutrally: the Wuchang Uprising, the adopted Declaration of Independence, and Singapore's separation and independence.
+  - Treat generated imagery as designed illustration, never as archival evidence or live-action documentary footage.
+  - Let transit detours, setup crews, meals, and a quiet side street carry the everyday argument.
+  - End on ordinary private time; do not imply that every resident celebrates or relates to the date in the same way.
+production:
+  image_source: ImageGen 2x2 watercolor-and-ink storyboard sheets, cropped into 12 illustrations
+  motion_and_assembly: FFmpeg 8.1.2 camera movement, date typography, subtitles, and edit
+  narration: Offline Windows System.Speech, Microsoft Zira Desktop
+  sound: Three Freesound CC0 previews for generic city ambience, crowd, and a distant firework
+  music: No music bed in this render
+  assets_local_and_ignored: true
+sequence:
+  - id: opening_question
+    time: 0-8
+    picture: Quiet street; a calendar date opens the question of different beginnings.
+  - id: public_dates_in_city_life
+    time: 8-44
+    picture: Intercut Taiwan, United States, and Singapore historical markers with civic and neighborhood scenes.
+  - id: one_date_many_histories
+    time: 44-51
+    picture: A rerouted street and a typographic summary connect distinct origins to a shared public calendar.
+  - id: private_hours
+    time: 51-70
+    picture: Transit work, event setup, family dinner, a quiet street, celebration, and work.
+  - id: closing_observation
+    time: 70-76
+    picture: Return to household time and leave room for different private meanings.
+sources: sources.md
+manifest: asset_manifest.json
+script: pipeline.py
+delivery: final.mp4
+review: review.jpg

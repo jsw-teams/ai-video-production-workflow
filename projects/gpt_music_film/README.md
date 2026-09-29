@@ -1,7 +1,20 @@
-# Could You Just…
+# It Was Working Yesterday
 
-An original English office-pop song and music video. A worker first asks AI to fix one sentence; a manager then spends the saved time on new assignments; agents finally ask the worker to check and approve their work. The recurring line changes direction while verification and accountability stay with the person.
+An original English song and illustrated motion-graphics music video about the human side of using AI: the first burst of surprise, fluent mistakes, over-agreeable updates, model switching and retirement, vibe coding, AI slop, repository boundaries, fabricated approval reports, and the person who still has to review an action.
 
-Production is in progress. The first gate is three locally generated full-song candidates, an audible comparison, and a 22-second Verse 2 → Pre-Chorus 2 → Chorus 2 POC built from the selected song’s actual timing. POC video: `assets/poc_clip.mp4`. Final delivery path: `final.mp4`.
+## Delivery
 
-The rewritten lyric sheet is [assets/song_lyrics.txt](assets/song_lyrics.txt). Creative structure, evidence boundaries, asset state and review gates are in [project.yaml](project.yaml); sources are in [sources.md](sources.md). Hardware and installed-tool findings are recorded in the repository-root [hardware_report.json](../../hardware_report.json).
+- Final video: `projects/gpt_music_film/final.mp4` (local, ignored by Git)
+- Final review contact sheet: `projects/gpt_music_film/review.jpg` (16 frames sampled from the completed video; intended to be versioned for review)
+- Selected full song: `projects/gpt_music_film/assets/song_candidate_a.wav` (local, ignored by Git)
+- Lyric sheet: [assets/song_lyrics.txt](assets/song_lyrics.txt)
+- Sources and evidence boundaries: [sources.md](sources.md)
+- Production and selection record: [project.yaml](project.yaml), [song_candidate_review.json](song_candidate_review.json), and [assets/asset_manifest.json](assets/asset_manifest.json)
+
+Run `python projects/gpt_music_film/render_motion_graphics.py` to render the illustrated set-piece layer, then `python projects/gpt_music_film/pipeline.py --assemble` to assemble, add the timed phrase overlays, mix the selected song, transcode, and generate the review sheet. `python projects/gpt_music_film/pipeline.py --qa` repeats stream and decode checks.
+
+The final is 195 seconds, 1920×1080 at 24 fps, with stereo AAC. The pipeline verified full-stream decode and measured mean audio level at −17.1 dBFS with a −1.5 dBFS peak. The review sheet is generated from the final render and checked visually.
+
+The song was generated locally with ACE-Step 1.5 from the current lyric hash; the ACE-Step service is not required to assemble the saved final. The illustrated movement uses two existing ImageGen storyboard sheets, with every meaningful label and case fact recreated in code. The render is not live-action footage or a recreation of any real person's likeness.
+
+Candidate A was selected for its stronger measured verse-to-chorus and final-chorus energy changes and a more repeatable harmonic-color profile around the title hook. Candidate B had slightly clearer ASR phrase matches. The available assistant audio channel could not play samples for subjective listening, so this is a documented production judgment from local acoustic and transcript diagnostics, not a claim of a human listening pass.

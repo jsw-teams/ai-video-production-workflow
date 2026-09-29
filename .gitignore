@@ -9,7 +9,6 @@ projects/zhongqiu/assets/*
 !projects/zhongqiu/assets/asset_manifest.json
 projects/*/renders/
 projects/*/final.mp4
-projects/*/review.jpg
 __pycache__/
 *.py[cod]
 *.wav
@@ -19,3 +18,11 @@ __pycache__/
 *.mov
 *.avi
 *.mkv
+!projects/zhongqiu/assets/asset_manifest.json
+!projects/zhongqiu/assets/edit_timeline.json
+!projects/zhongqiu/assets/captions.ass
+!projects/zhongqiu/assets/final_qa.json
+!projects/zhongqiu/assets/narration.txt
+!projects/zhongqiu/assets/render_dice_scene.py
+!projects/zhongqiu/assets/create_voiceover.ps1
+!projects/zhongqiu/assets/audio/

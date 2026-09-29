@@ -1,165 +1,74 @@
 {
   "as_of": "2026-09-29",
+  "scope": "Directly checked executables, Python imports, local model caches, MCP tools, processes and the audio API port in the production environment.",
   "host": {
-    "os": "Windows 11 Pro 10.0.26200",
-    "cpu": "13th Gen Intel Core i5-13500H",
+    "os": "Windows 11 (existing workstation report)",
+    "cpu": "Intel Core i5-13500H (existing workstation report)",
     "ram_gb": 15.7,
     "gpus": [
       {
         "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
-        "reported_vram_gb": 6.0,
-        "nvidia_smi": "596.36 driver; CUDA capability reported as 13.2; 0 MiB used at inspection"
+        "vram_mib": 6141,
+        "driver": "596.36",
+        "cuda_seen_from_ace_step_python": "12.8",
+        "memory_used_mib_at_check": 0
       },
-      {
-        "name": "Intel Iris Xe Graphics",
-        "reported_memory_gb": 2.0
-      },
-      {
-        "name": "MuMu Virtual Display Adapter",
-        "reported_memory_gb": 0.0
-      }
-    ],
-    "disk_free_gb": {
-      "C:": 86.9,
-      "D:": 274.0
+      { "name": "Intel Iris Xe Graphics" }
+    ]
+  },
+  "python": {
+    "general": {
+      "path": "D:\\Hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+      "version": "3.11.15",
+      "present_packages": ["Pillow"],
+      "audio_and_ml_packages_missing": ["librosa", "numpy", "torch", "whisper", "faster_whisper", "soundfile", "scipy"]
+    },
+    "audio_analysis": {
+      "path": "D:\\AIVideoTools\\ASR\\Scripts\\python.exe",
+      "version": "3.11.15",
+      "present_packages": ["librosa", "numpy", "faster_whisper", "soundfile", "scipy"],
+      "missing_packages": ["torch", "Pillow"],
+      "whisper_backend": "faster-whisper; model cache at D:\\AIProductionModels\\huggingface-cache"
     }
   },
-  "accelerators": {
-    "nvidia_driver_cuda": "596.36 / CUDA 13.2 capability reported by nvidia-smi",
-    "cuda_toolkit_path": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8",
-    "pytorch_cuda": "isolated ACE-Step environment: torch 2.7.1+cu128; CUDA 12.8; torch.cuda.is_available=True; RTX 4050 Laptop GPU detected with 6.0 GiB",
-    "rocm": "not present",
-    "metal": "not applicable on Windows"
-  },
-  "runtime": {
-    "python": "3.11.15 (64-bit)",
-    "python_path": "D:\\Hermes\\hermes-agent\\venv\\Scripts\\python.exe",
-    "uv": "D:\\Hermes\\bin\\uv.exe",
-    "pytorch": "absent in shared Python; isolated ACE-Step uv environment has torch 2.7.1+cu128 and detects the RTX 4050 on CUDA 12.8",
-    "relevant_python_packages_present": [
-      "PyYAML",
-      "Pillow"
+  "production_tools": {
+    "ffmpeg": { "path": "C:\\Users\\User\\AppData\\Local\\Microsoft\\WinGet\\Links\\ffmpeg.exe", "version": "8.1.2" },
+    "ffprobe": { "path": "C:\\Users\\User\\AppData\\Local\\Microsoft\\WinGet\\Links\\ffprobe.exe", "version": "8.1.2" },
+    "blender": [
+      { "path": "D:\\blender\\blender.exe", "version": "5.2.1 LTS", "verified": true },
+      { "path": "D:\\AIVideoTools\\BlenderPortable\\blender-5.2.2-windows-x64\\blender.exe", "version": "5.2.2", "present": true }
     ],
-    "ffmpeg": "8.1.2, available on PATH",
-    "ffprobe": "available with the FFmpeg build",
-    "blender": "no executable discovered on PATH or in standard locations checked",
-    "docker": "not installed",
-    "comfyui": "not found on PATH or in standard install/cache paths checked"
-  },
-  "local_models": {
+    "krita": "Not found on PATH or in standard Program Files folders searched.",
+    "python_launcher": "py is not installed/on PATH; call an explicit interpreter path.",
     "ollama": {
       "installed": true,
-      "models": [
-        "gemma4:e2b-it-qat (4.3 GB; text model, not a media generator)"
-      ]
-    },
-    "ace_step": "official upstream cloned to D:\\AIVideoTools\\ACE-Step-1.5 at ca1e85fe9430179831e6bc6be790c332190a3866; all 125 resolved packages installed; isolated CUDA runtime verified; official 2B Turbo DiT, VAE, and Qwen3-Embedding-0.6B weights downloaded; local readiness check now verifies these active inference components without requiring the unused LM",
-    "huggingface_cache": "no model cache found at the standard user path checked",
-    "torch_hub_cache": "no model cache found at the standard user path checked"
-  },
-  "production_route": {
-    "first": "ACE-Step 1.5 official local inference for GPT song candidates",
-    "device_plan": "RTX 4050 6 GB tier2: ACE-Step 2B Turbo DiT with INT8 weight-only quantization and CPU/DiT offload, batch 1. 0.6B 5Hz LM (MIT weights, SHA256 recorded) initialized successfully with PyTorch CPU offload immediately before the pause; its 132 BPM song-generation route was not submitted.",
-    "software_license_checked": "Official upstream repository and official Hugging Face model page both label code/model MIT as checked on 2026-09-28.",
-    "paid_services": "Not authorized; recorded as fallback only.",
-    "video_candidate": "Lightricks LTX-Video 2B 0.9.8 distilled through official Python inference; code Apache-2.0, weights LTXV Open Weights License 0.X. Low-VRAM/offload feasibility remains to be measured after the GPT song and POC.",
-    "video_route_excluded_for_current_hardware": "Wan2.2-TI2V-5B official instructions specify at least 24 GB VRAM; this host reports 6 GB."
-  },
-  "production_attempt": {
-    "ace_environment": "D:\\AIVideoTools\\ACE-Step-1.5\\.venv",
-    "model_checkpoint_directory": "D:\\AIVideoTools\\ACE-Step-1.5\\checkpoints",
-    "dependency_install": "Completed official upstream uv sync: 125 resolved packages installed, including torch 2.7.1+cu128; first 3.0 GiB transfer ended early, retry completed successfully.",
-    "model_inference": "official local UI/API running on 127.0.0.1:8001; initialization logged int8_weight_only DiT quantization, 6 GB GPU auto-detected CPU offload, and init_llm=false; no LM weight loaded",
-    "checkpoint_snapshot": "18 official core files: acestep-v15-turbo, vae, Qwen3-Embedding-0.6B, root config.json and README.md; no LM safetensors weight completed",
-    "upstream_tool_adjustment": "D:\\AIVideoTools\\ACE-Step-1.5\\acestep\\core\\generation\\handler\\init_service_downloads.py now verifies the requested DiT, Qwen text encoder and official VAE independently before considering a whole-repo download; this avoids fetching/loading the optional 1.7B LM when init_llm=false",
-    "download_transport_attempts": "Hugging Face HTTP streamed the extra LM through repeated CDN interruptions; optional hf_xet (Apache-2.0 upstream) was attempted, then stopped when unnecessary. Core checkpoints were already complete.",
-    "candidate_songs_generated": 3,
-    "candidate_song_rounds": {
-      "first_round": {
-        "generated": 3,
-        "disposition": "rejected_after_local_whisper_found_production_notes_and_section_descriptions_sung_as_lyrics",
-        "word_error_rates": [
-          0.622,
-          0.585,
-          0.609
-        ]
-      },
-      "clean_lyrics_round": {
-        "126_bpm": "rejected_after_clean_lyrics_local_whisper_WER_0.493_exceeded_0.30_POC_gate; detected_tempo_123.05_BPM; key_estimate_D_major",
-        "128_bpm": "Generated successfully at the stable path with seed 610128; ACE-Step DiT phase 12.97s, about 25s wall time, tiled VAE CUDA decode chunk=128; Whisper WER 0.439, detected 129.20 BPM, estimated A minor, duration 176.20s. Pending audition/selection; lyric-fit gate 0.30 not passed.",
-        "132_bpm": "Paused before clean song-generation submission; 0.6B LM initialized successfully on CPU before API shutdown. Existing stable path is still the rejected first-round audio."
-      }
-    },
-    "candidate_audio_outputs": [
-      "projects/gpt_music_film/assets/song_candidate_126.wav",
-      "projects/gpt_music_film/assets/song_candidate_128.wav",
-      "projects/gpt_music_film/assets/song_candidate_132.wav"
-    ],
-    "candidate_review": "Partial technical comparison contains clean 126 and 128 candidates; 132 clean generation is paused. No song selected; subjective listening BLOCKED by runtime limitation and tool-review rejection.",
-    "lyric_alignment_tool": "Official ggml-org whisper.cpp Windows x64 v1.8.7 CPU release at D:\\AIVideoTools\\WhisperCpp; zip SHA256 verified against the GitHub release asset API; MIT code. ggml-large.bin is cached outside the repository and its original download provenance is not verified; use for internal QA only, do not redistribute the model file.",
-    "candidate_analysis_environment": "D:\\AIVideoTools\\ASR Python 3.11 environment; librosa 0.11.0; ASR JSON retains Whisper subword timestamps for word alignment, and librosa estimates tempo/key/beat grid/section energy. This is technical analysis, not subjective music audition.",
-    "low_vram_runtime_finding": "The first clean 128 BPM attempt retained the DiT on GPU and stalled at VAE CPU fallback (nested status 0, progress 0.8) for 2h16 with no artifact; it was stopped. Restarting with ACESTEP_OFFLOAD_TO_CPU=true and ACESTEP_OFFLOAD_DIT_TO_CPU=true freed VRAM; the replacement task completed with tiled VAE CUDA decode in about 25s wall time. The clean 128 BPM output is 67,660,888 bytes.",
-    "long_task_timeout_fix": "Local ACE-Step api_server.py now reads ACESTEP_TASK_TIMEOUT_SECONDS (default 21600s) instead of a fixed 3600s. The running service retains its original one-hour timeout; future server starts will use the longer limit.",
-    "licensed_small_lm_attempt": "Official ACE-Step/acestep-5Hz-lm-0.6B Hugging Face card labels weights MIT (checked 2026-09-28; model.safetensors 1,325,804,024 bytes). Download completed to the external checkpoint cache via HF Hub HTTP after the initial Xet transfer stalled; SHA256 5D92A60806E2E88C04DE58DDC6DDE93F2BC8F1336162B3AD5853886C9BCC6B82. No model file was added to this repository.",
-    "foley_sources": "Four Freesound public CC0 preview streams documented in projects/gpt_music_film/assets/foley_sources.json and asset_manifest.json: office keyboard, paper shuffle, pen writing, and busy office ambience; source-page licenses and file hashes recorded.",
-    "paid_services_used": false,
-    "active_task_snapshot": {
-      "nested_status": 0,
-      "task_id": "f483e783-5202-465e-973d-92e9e0ffa27d",
-      "observed_at": "2026-09-29T00:35:36+08:00",
-      "generator": "projects/gpt_music_film/generate_song_candidates.py --candidate could_you_just_song_128",
-      "asset_id": "could_you_just_song_128",
-      "stage": "Decoding audio...",
-      "api_status": 2,
-      "output_path": "projects/gpt_music_film/assets/song_candidate_128.wav",
-      "output_retrieved": false,
-      "progress": 0.8
-    },
-    "abandoned_task": {
-      "stage": "Decoding audio...",
-      "asset_id": "could_you_just_song_128",
-      "status": "stopped_after_cpu_vae_decode_stall_no_artifact",
-      "reason": "DiT retained 4.7 GiB VRAM; CPU VAE saturated one core; no progress change for over ten minutes.",
-      "progress": 0.8,
-      "elapsed_wall_time": "2h16m",
-      "observed_at": "2026-09-29T00:39:00+08:00",
-      "task_id": "f483e783-5202-465e-973d-92e9e0ffa27d"
-    },
-    "latest_completed_clean_song": {
-      "generation_info": "12.97s DiT; about 25s wall time including VAE/export",
-      "task_id": "5bf2cbf6-22c6-4b78-b49e-71d760910b47",
-      "status": "generated_pending_audition",
-      "generated_at": "2026-09-29T00:44:21+08:00",
-      "technical_review": {
-        "duration_seconds": 176.2,
-        "detected_bpm": 129.2,
-        "wer": 0.4386363636,
-        "estimated_key": "A minor"
-      },
-      "asset_id": "could_you_just_song_128",
-      "output_path": "projects/gpt_music_film/assets/song_candidate_128.wav",
-      "output_bytes": 67660888,
-      "seed": 610128,
-      "model": "ACE-Step 1.5 acestep-v15-turbo",
-      "vae": "tiled CUDA decode, chunk size 128"
-    },
-    "lm_cpu_initialization": {
-      "status": "initialized_successfully_before_user_pause",
-      "song_generation_submitted": false,
-      "license": "MIT",
-      "device": "cpu",
-      "model": "ACE-Step/acestep-5Hz-lm-0.6B",
-      "backend": "pt",
-      "offload_to_cpu": true
-    },
-    "pause_snapshot": {
-      "status": "paused_by_user",
-      "free_ram_gb_after_shutdown": 9.4,
-      "api_port_8001_listening": false,
-      "observed_at": "2026-09-29T01:08:36.6156060+08:00",
-      "clean_132_generation_submitted": false,
-      "active_ace_process": false
+      "cached_models": ["gemma4:e2b-it-qat (4.3 GB; text model, not an image/audio generator)"]
     }
   },
-  "production_state": "paused_by_user_2026-09-29"
+  "local_media_models": {
+    "ace_step": {
+      "upstream_code": "D:\\AIVideoTools\\ACE-Step-1.5",
+      "python": "D:\\AIVideoTools\\ACE-Step-1.5\\.venv\\Scripts\\python.exe",
+      "runtime": "torch 2.7.1+cu128; CUDA available; RTX 4050 detected; torchaudio, transformers, diffusers and acestep import successfully",
+      "weights_cache": "D:\\AIProductionModels\\huggingface-cache\\hub\\models--ACE-Step--Ace-Step1.5",
+      "api_state_at_check": "No process on port 8001; start the existing local server only when a cue must be generated.",
+      "license_note": "Existing project manifest records the upstream code/model as MIT. No model weights are stored in this repository."
+    },
+    "image_generation": "Built-in ImageGen tool is available; generated project storyboard sheets already exist in the workspace.",
+    "local_image_generation": "No local diffusion service was found or needed.",
+    "whisper_desktop": "D:\\WhisperDesktop\\WhisperDesktop.exe and a local 3 GB ggml model exist; the cached model's provenance is not verified and it is not redistributed."
+  },
+  "mcp_and_integrations": {
+    "available": ["GitHub", "document control", "sites", "writing style", "Hotline", "Codex thread/TUI"],
+    "built_in_tools": ["ImageGen", "web search", "filesystem/command execution"],
+    "not_found": ["Blender-specific MCP", "ACE-Step/music MCP", "ASR MCP"],
+    "execution_route": "Blender CLI/Python, local ACE-Step REST/API and local ASR Python/Whisper CLI."
+  },
+  "environment_findings": [
+    "Bare python resolves to a general Python without librosa. analyze_song_candidates.py now discovers and re-executes in the existing D:\\AIVideoTools\\ASR\\Scripts\\python.exe environment; the fix was verified with --help.",
+    "Blender is installed outside PATH; invoke its verified executable path directly.",
+    "The ACE-Step environment and weights are local and CUDA-capable, but the API is not persistent; inspect/start/stop it explicitly.",
+    "Keep render videos, audio, model files and caches out of Git. The projects' documented local delivery paths are final.mp4."
+  ],
+  "production_state_at_inventory": "All three project productions completed in parallel and passed full-file video decode; final videos remain local and ignored. The retrospective is being added after the production push."
 }
